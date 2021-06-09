@@ -1,0 +1,49 @@
+.u-company{
+    padding: 50PX 0%;
+    width: 100%;
+    display: flow-root;
+}
+.u-company>div>div{
+    width: 14.2%;
+    height: 185px;
+    float: left;
+}
+.u-company>div {
+    width: 80%;
+    margin: auto;
+}
+.u-company-title{
+    width: 100%!important;
+    height:4px;
+    background-color: #F2BA27;
+    margin: 100px 0!important;
+}
+.u-company-title div{
+    width: auto!important;
+    font-size: 40px;
+    padding: 10px 40px;
+    background-color: white;
+    font-weight: bold;
+    color: #F2BA27;
+}
+@media only screen and (max-width: 1500px) {
+    .u-company>div>div{
+        width: 25%;
+    }
+    .u-company-flag{
+        margin-left: 12.5%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .u-company>div>div{
+        width: 50%;
+    }
+    .u-company-flag{
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .u-company>div>div{
+        width: 100%;
+    }
+}
