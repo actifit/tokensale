@@ -99,6 +99,10 @@
     font-size: 86px;
 }
 
+.u-video img {
+    width: 32%;
+}
+
 @media only screen and (max-width: 1100px) {
     .u-header>div>div {
         position: relative;
@@ -111,31 +115,25 @@
         justify-content: space-around;
         align-items: center;
     }
-    
     .u-header-title1 {
         width: 100%;
         font-size: 32px;
     }
-
     .u-header-title2 {
         width: 100%;
         font-size: 26px;
     }
-
     .u-header-desc {
         width: 100%;
         font-size: 16px;
     }
-
     .buy-btn {
         height: 45px;
         font-size: 20px;
     }
-
     .header-token-div-top {
         font-size: 19px;
     }
-
     .header-token-div-down {
         font-size: 56px;
     }

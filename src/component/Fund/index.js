@@ -5,7 +5,7 @@ export default function Landing() {
     return (
         <div className="u-fund u-flex-around u-flex-column">
             <div className="u-fund-title ">THE GENERATED FUNDS WILL BE USED FOR:</div>
-            <div className="u-fund-body u-flex-between">
+            <div className="u-fund-body u-flex-between u-responsive">
                 <div>
                     <div className="u-fund-body-item">
                         <div className="u-fund-body-item-num u-flex-around">30%</div>

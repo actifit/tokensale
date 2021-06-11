@@ -11,14 +11,14 @@ export default function Landing() {
                 </div>
                 <div className="u-invest-var-main">
                     <div>
-                        <img className="u-invest-var-main-color" src="/assets/img/bar_back.png" style={{width: "70%"}}/>
-                        <div className="u-invest-var-main-num" style={{left: "70%"}}>70%</div>
+                        <img className="u-invest-var-main-color" src="/assets/img/bar_back.png" style={{ width: "70%" }} />
+                        <div className="u-invest-var-main-num" style={{ left: "70%" }}>70%</div>
                     </div>
                 </div>
             </div>
             <div className="u-invest-title">INVEST NOW TO WIN UP TO</div>
             <div className="u-invest-2000 u-flex-around">$ 200,000</div>
-            <div className="u-invest-items">
+            <div className="u-invest-items u-responsive">
                 <div className="u-invest-item">
                     <div className="u-invest-item-title1 u-flex-around u-flex-column">
                         AFITX
@@ -34,6 +34,7 @@ export default function Landing() {
                     <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Increase User Rank</div>
                     <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Core DeFi token </div>
                     <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
+                    <div className="u-flex-around invest-btn u-btn u-responsive-after">BUY AFITX </div>
                 </div>
                 <div className="u-invest-item">
                     <div className="u-invest-item-title1 u-flex-around u-flex-column">
@@ -50,13 +51,15 @@ export default function Landing() {
                     <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Increase User Rank</div>
                     <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Reward friends for tracking fitness activity</div>
                     <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
+                    <div className="u-flex-around invest-btn u-btn u-responsive-after">BUY AFITX</div>
                 </div>
-            </div><div className="u-invest-items" style={{marginTop:"0"}}>
+            </div>
+            <div className="u-invest-items u-responsive-before" style={{ marginTop: "0" }}>
                 <div className="u-invest-item">
-                <div className="u-flex-around invest-btn u-btn">BUY AFITX </div>
+                    <div className="u-flex-around invest-btn u-btn">BUY AFITX </div>
                 </div>
                 <div className="u-invest-item">
-                <div className="u-flex-around invest-btn u-btn">BUY AFITX</div>
+                    <div className="u-flex-around invest-btn u-btn">BUY AFITX</div>
                 </div>
             </div>
             <img className="invest_money" src="/assets/img/money1.png" />

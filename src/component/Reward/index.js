@@ -7,11 +7,11 @@ export default function Landing() {
             <div className="u-reward-header">
                 <div className="u-flex-around">REWARDS DISTRIBUTED TO</div>
             </div>
-            <div className="u-reward-line">
+            <div className="u-reward-line u-responsive-before">
                 <div className="u-reward-line1"></div>
                 <div className="u-reward-line2"></div>
             </div>
-            <div className="u-reward-body u-flex-between">
+            <div className="u-reward-body u-flex-between u-responsive">
                 <div className="u-reward-body-item">
                     <img src="/assets/img/hand.svg" />
                     <div className="u-flex-around">

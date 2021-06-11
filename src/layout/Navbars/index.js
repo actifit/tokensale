@@ -15,8 +15,8 @@ export default function Landing(props) {
     return (
         <div className="navbars">
             <div className="navbars-top u-flex-between">
-                <a className="Actifit-btn u-flex-around u-btn">Actifit.io</a>
-                <div className="social-icons u-flex-between">
+                <a className="Actifit-btn u-flex-around u-btn u-responsive-before">Actifit.io</a>
+                <div className="social-icons u-flex-between u-responsive-before">
                     <a><img src="/assets/img/facebook.svg" /></a>
                     <a><img src="/assets/img/instagram.svg" /></a>
                     <a><img src="/assets/img/cartoon.svg" /></a>
@@ -25,12 +25,12 @@ export default function Landing(props) {
                 </div>
             </div>
             <div className="navbars-down u-flex-between u-flex-column">
-                <div className="u-flex-between navbars-down-top">
+                <div className="u-flex-between navbars-down-top u-responsive">
                     <a className="logo-div u-flex-around u-flex-column">
                         <img src="/assets/img/logo.svg" />
                         <div>From the Creators of Actifit</div>
                     </a>
-                    <div className="token-div u-flex-around u-flex-column u-responsive-before">
+                    <div className="token-div u-flex-around u-flex-column">
                         <div className="token-div-top">Token Sale <span>STARTS</span> in</div>
                         <div className="token-div-down">00:00:00</div>
                     </div>
@@ -40,10 +40,10 @@ export default function Landing(props) {
                         <a className="Connect-btn u-flex-around u-btn">Connect Metamask</a>
                     </div>
                 </div>
-                <div className="token-div u-flex-around u-flex-column u-responsive-after">
+                {/* <div className="token-div u-flex-around u-flex-column u-responsive-after">
                     <div className="token-div-top">Token Sale <span>STARTS</span> in</div>
                     <div className="token-div-down">00:00:00</div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

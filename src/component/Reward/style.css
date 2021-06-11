@@ -1,7 +1,8 @@
 .u-reward {
     padding: 50px 10%;
 }
-.u-reward-header{
+
+.u-reward-header {
     font-size: 40px;
     font-weight: bold;
     color: #F2BA27;
@@ -9,55 +10,65 @@
     border: solid 4px #F2BA27;
     border-radius: 24px;
 }
-.u-reward-line{
+
+.u-reward-line {
     position: relative;
     width: 100%;
     height: 120px;
 }
-.u-reward-line1{
+
+.u-reward-line1 {
     position: absolute;
     left: 50%;
     height: 120px;
     width: 4px;
     background-color: #F2BA27;
 }
-.u-reward-line2{
+
+.u-reward-line2 {
     width: 80%;
     height: 60px;
     border: solid 4px #F2BA27;
     margin: 60px auto 0 auto;
     border-bottom: none;
 }
-.u-reward-body-item{
+
+.u-reward-body-item {
     border: solid 4px #F2BA27;
     padding: 2.5%;
     border-radius: 43px;
     width: 25%;
 }
-.u-reward-body-item img{
+
+.u-reward-body-item img {
     margin: 0 30%;
     width: 30%;
 }
-.u-reward-body-title{
+
+.u-reward-body-title {
     font-family: rumbles;
     font-size: 100px;
     color: #FF112D;
     margin-top: 20px;
 }
-.u-reward-body-body{
+
+.u-reward-body-body {
     font-size: 35px;
     color: #707070;
 }
 
-
 @media only screen and (max-width: 1100px) {
-    .u-reward-header{
+    .u-reward-header {
         font-size: 20px;
     }
-    .u-reward-body-title{
+    .u-reward-body-title {
         font-size: 35px;
     }
-    .u-reward-body-body{
+    .u-reward-body-body {
         font-size: 15px;
+    }
+    .u-reward-body-item {
+        margin: 20px 0;
+        width: 100%;
     }
 }

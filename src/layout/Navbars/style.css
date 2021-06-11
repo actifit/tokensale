@@ -58,6 +58,7 @@
     color: #FF112D;
     font-size: 86px;
 }
+
 .Connect-btn-a {
     margin-right: 3vw;
     height: 45px;
@@ -74,26 +75,26 @@
     border-radius: 9px;
     min-width: 195px;
 }
-.navbars-down-top{
+
+.navbars-down-top {
     width: 100%;
 }
-@media only screen and (max-width: 700px) {
+
+@media only screen and (max-width: 1100px) {
     .navbars-top {
-        height: 90px;
+        height: auto;
+        padding: 15px 0;
         flex-direction: column;
     }
-}
-@media only screen and (max-width: 1100px) {
     .navbars-down {
         height: auto;
     }
     .token-div-top {
         font-size: 19px;
     }
-
     .logo-div img {
-    width: 280px;
-    margin-top: 20px;
+        width: 280px;
+        margin-top: 20px;
     }
     .logo-div div {
         font-size: 19px;
@@ -102,11 +103,10 @@
         font-size: 56px;
     }
     .Connect-btn-a {
-        font-size: 20px;
+        font-size: 16px;
     }
-
     .Connect-btn {
-        font-size: 20px;
+        font-size: 16px;
         min-width: auto;
     }
     .token-div {

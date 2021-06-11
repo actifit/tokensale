@@ -1,49 +1,65 @@
-.u-fund{
+.u-fund {
     padding: 50px 10%;
 }
-.u-fund>div>div{
+
+.u-fund>div>div {
     width: 45%;
 }
+
 .u-fund-title {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
     color: #F2BA27;
 }
-.u-fund-body-item{
+
+.u-fund-body-item {
     display: flex;
     background-color: #FAFAFA;
-    padding:50px;
+    padding: 50px;
     border-radius: 43px;
     margin: 25px 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.u-fund-body-item-num{
+
+.u-fund-body-item-num {
     font-family: rumbles;
     width: 35%;
     font-size: 75px;
     color: #FF112D;
 }
-.u-fund-body-item div:last-child{
+
+.u-fund-body-item div:last-child {
     width: 55%;
 }
-.u-fund-body-item div:last-child div{
+
+.u-fund-body-item div:last-child div {
     width: 100%;
 }
-.u-fund-body-item-title{
+
+.u-fund-body-item-title {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 }
-.u-fund-body-item-desc{
+
+.u-fund-body-item-desc {
     font-size: 15px;
 }
+
 @media only screen and (max-width: 1100px) {
-    /* .u-fund>div>div{
+    .u-fund>div>div {
         width: 100%;
-    } */
-    .u-fund-body-item-num{
+    }
+    .u-fund-body-item-num {
         font-size: 50px;
         min-width: 100px;
+    }
+    .u-fund-body-item {
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .u-fund-title {
+        font-size: 25px;
     }
 }
