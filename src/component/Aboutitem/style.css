@@ -32,6 +32,9 @@
 }
 
 @media only screen and (max-width: 1100px) {
+    .u-aboutitem {
+        padding: 0PX 10%;
+    }
     .u-about>div {
         width: 100%;
     }

@@ -93,7 +93,7 @@
         font-size: 19px;
     }
     .logo-div img {
-        width: 280px;
+        width: 250px;
         margin-top: 20px;
     }
     .logo-div div {
@@ -117,6 +117,6 @@
 
 @media only screen and (max-width: 1500px) {
     .navbars-down {
-        padding: 0 0% 50px 0%;
+        padding: 0 0% 49px 0%;
     }
 }

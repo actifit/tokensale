@@ -23,6 +23,11 @@ export default function Landing(props) {
                     <a><img src="/assets/img/twitter.svg" /></a>
                     <a><img src="/assets/img/ariplane.svg" /></a>
                 </div>
+                <div className="u-flex-around u-responsive-after">
+                    <a className="Connect-btn-a u-flex-around">Team</a>
+                    <a className="Connect-btn-a u-flex-around">Docs</a>
+                    <a className="Connect-btn u-flex-around u-btn">Connect Metamask</a>
+                </div>
             </div>
             <div className="navbars-down u-flex-between u-flex-column">
                 <div className="u-flex-between navbars-down-top u-responsive">
@@ -34,7 +39,7 @@ export default function Landing(props) {
                         <div className="token-div-top">Token Sale <span>STARTS</span> in</div>
                         <div className="token-div-down">00:00:00</div>
                     </div>
-                    <div className="u-flex-around">
+                    <div className="u-flex-around u-responsive-before">
                         <a className="Connect-btn-a u-flex-around">Team</a>
                         <a className="Connect-btn-a u-flex-around">Docs</a>
                         <a className="Connect-btn u-flex-around u-btn">Connect Metamask</a>
