@@ -13,6 +13,10 @@
         src: url(/assets/font/MYRIADPRO-REGULAR.OTF);
     }
     
+    a {
+        text-decoration: none;
+    }
+    
     * {
         font-family: gotham;
     }

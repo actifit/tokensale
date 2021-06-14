@@ -1,5 +1,6 @@
 .u-reward {
     padding: 50px 10%;
+    padding-bottom: 0;
 }
 
 .u-reward-header {
@@ -38,6 +39,7 @@
     padding: 2.5%;
     border-radius: 43px;
     width: 25%;
+    min-height: 250px;
 }
 
 .u-reward-body-item img {
@@ -53,7 +55,7 @@
 }
 
 .u-reward-body-body {
-    font-size: 35px;
+    font-size: 25px;
     color: #707070;
 }
 
@@ -62,6 +64,7 @@
         font-size: 21px;
         text-align: center;
         background-color: #fff;
+        margin-bottom: 20px;
     }
     .u-reward-body-title {
         font-size: 50px;
@@ -79,7 +82,7 @@
     .u-reward-body-item::before {
         content: "";
         width: 4px;
-        height: 100px;
+        height: 46px;
         background-color: #F2BA27;
         position: absolute;
         top: -46px;

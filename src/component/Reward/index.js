@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import './style.css';
 export default function Landing() {
 
@@ -12,27 +14,33 @@ export default function Landing() {
                 <div className="u-reward-line2"></div>
             </div>
             <div className="u-reward-body u-flex-between u-responsive">
-                <div className="u-reward-body-item">
-                    <img src="/assets/img/hand.svg" />
-                    <div className="u-flex-around">
-                        <div className="u-reward-body-title u-flex-around">5</div>
-                        <div className="u-reward-body-body u-flex-around">Random Winners sharing up to 100,000$ </div>
+                <Fade left>
+                    <div className="u-reward-body-item">
+                        <img src="/assets/img/hand.svg" />
+                        <div className="u-flex-around">
+                            <div className="u-reward-body-title u-flex-around">5</div>
+                            <div className="u-reward-body-body u-flex-around">Random Winners sharing up to 100,000$ </div>
+                        </div>
                     </div>
-                </div>
-                <div className="u-reward-body-item">
-                    <img src="/assets/img/star.svg" />
-                    <div className="u-flex-around">
-                        <div className="u-reward-body-title">5</div>
-                        <div className="u-reward-body-body">Top Investors sharing up to 100,000$</div>
+                </Fade>
+                <Fade up>
+                    <div className="u-reward-body-item">
+                        <img src="/assets/img/star.svg" />
+                        <div className="u-flex-around">
+                            <div className="u-reward-body-title">5</div>
+                            <div className="u-reward-body-body">Top Investors sharing up to 100,000$</div>
+                        </div>
                     </div>
-                </div>
-                <div className="u-reward-body-item">
-                    <img src="/assets/img/graphic.svg" />
-                    <div className="u-flex-around">
-                        <div className="u-reward-body-title">200</div>
-                        <div className="u-reward-body-body">First Investors to Receive extra AFITX airdrop</div>
+                </Fade>
+                <Fade right>
+                    <div className="u-reward-body-item">
+                        <img src="/assets/img/graphic.svg" />
+                        <div className="u-flex-around">
+                            <div className="u-reward-body-title">200</div>
+                            <div className="u-reward-body-body">First Investors to Receive extra AFITX airdrop</div>
+                        </div>
                     </div>
-                </div>
+                </Fade>
             </div>
         </div>
     );
