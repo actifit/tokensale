@@ -42,7 +42,7 @@ export default function Landing() {
                         <div className="u-fund-body-item">
                             <div className="u-fund-body-item-num u-flex-around">30%</div>
                             <div>
-                                <div className="u-fund-body-item-title">PROVIDING LIQUIDITY</div>
+                                <div className="u-fund-body-item-title">FUNDING</div>
                                 <div className="u-fund-body-item-desc">the development effort on Actifit and Actifit DeFi.</div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ export default function Landing() {
                         <div className="u-fund-body-item">
                             <div className="u-fund-body-item-num u-flex-around">10%</div>
                             <div>
-                                <div className="u-fund-body-item-title">ALLOCATING REWARDS</div>
+                                <div className="u-fund-body-item-title">MARKETING EFFORT</div>
                                 <div className="u-fund-body-item-desc"></div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ export default function Landing() {
                         <div className="u-fund-body-item">
                             <div className="u-fund-body-item-num u-flex-around">10%</div>
                             <div>
-                                <div className="u-fund-body-item-title">BUYING HIVE TOKEN</div>
+                                <div className="u-fund-body-item-title">PROJECT GROWTH & PARTNERSHIPS</div>
                                 <div className="u-fund-body-item-desc"></div>
                             </div>
                         </div>

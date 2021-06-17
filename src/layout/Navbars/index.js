@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Zoom from 'react-reveal/Zoom';
-import Fade from 'react-reveal/Fade';
 import './style.css';
 export default function Landing(props) {
     // var flag = 0;

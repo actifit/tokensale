@@ -33,9 +33,9 @@ export default function Landing() {
                             Governance Token
                         </div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Core DeFi token </div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp; Further Decentralize Actifit </div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Further Decentralize Actifit </div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Voting </div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp; Fit Loans</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Fit Loans</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Increase User Rank</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Core DeFi token </div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
