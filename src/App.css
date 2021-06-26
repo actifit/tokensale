@@ -1,16 +1,16 @@
     @font-face {
         font-family: rumbles;
-        src: url(/assets/font/Rumblesport_Athletic_CAPSFONT.otf);
+        src: url("./assets/font/Rumblesport_Athletic_CAPSFONT.otf");
     }
     
     @font-face {
         font-family: helveti;
-        src: url(/assets/font/HelveticaNeue-Condensed.ttf);
+        src: url("./assets/font/HelveticaNeue-Condensed.ttf");
     }
     
     @font-face {
         font-family: gotham;
-        src: url(/assets/font/MYRIADPRO-REGULAR.OTF);
+        src: url("./assets/font/MYRIADPRO-REGULAR.OTF");
     }
     
     a {
@@ -124,6 +124,10 @@ a {
     .u-responsive-after {
         display: none;
     }
+	
+	* {
+		box-sizing: unset !important;
+	}
     
     @media only screen and (max-width: 1100px) {
         .u-responsive-before {

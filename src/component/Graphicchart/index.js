@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from 'react';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';

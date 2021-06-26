@@ -1,3 +1,6 @@
+/* eslint-disable */
+
+
 import React from 'react';
 import Navbars from '../layout/Navbars';
 import Header from '../component/Header';
