@@ -54,7 +54,8 @@ export default function Landing() {
             <Zoom>
                 <div className="header-down u-flex-around">
                     <div className="header-token-div u-flex-around u-flex-column">
-                        <Countdown date={tsEndDate} renderer={renderer}/>
+                        <div className="header-token-div-top">Token Sale <span>ENDS</span> in</div>
+                        <div className="header-token-div-down">00:00:00</div>
                     </div>
                 </div>
             </Zoom>

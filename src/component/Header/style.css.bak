@@ -90,7 +90,6 @@
 }
 
 .header-token-div-top {
-	text-align: center;
     color: #747474;
     font-size: 29px;
 }

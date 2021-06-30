@@ -68,8 +68,5 @@
     "husky": "^4.3.0",
     "prettier": "^2.1.2",
     "source-map-explorer": "^2.5.1"
-  },
-  "engines": {
-    "node": "14.15.3"
   }
 }

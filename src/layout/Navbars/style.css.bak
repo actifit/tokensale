@@ -51,13 +51,12 @@
 .token-div-top {
     color: #FF112D;
     font-size: 29px;
-	text-align: center;
 }
 
 .token-div-down {
     font-family: rumbles;
     color: #FF112D;
-    font-size: 80px;
+    font-size: 86px;
 }
 
 .Connect-btn-a {

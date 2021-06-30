@@ -8,27 +8,6 @@ import './style.css';
 import { Button, useWalletModal } from '@pancakeswap-libs/uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 
-import ReactDOM from 'react-dom';
-import Countdown, { zeroPad, calcTimeDelta, formatTimeDelta } from 'react-countdown';
-
-// Random component
-const Completionist = () => <div className="token-div-top">Token Sale is <span>RUNNING!</span></div>;
-
-const tsStartDate = 1627920000000;
-const tsEndDate = 1628092800000;
-
-// Renderer callback with condition
-const renderer = ({ days, hours, minutes, seconds, completed }) => {
-  if (Date.now() >= tsEndDate){
-	return '';
-  }else if (completed) {
-    // Render a completed state
-    return <Completionist />;
-  } else {
-    // Render a countdown
-	return <div><div className="token-div-top">Token Sale <span>STARTS</span> in</div><div className="token-div-down">{zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}</div></div>;
-  }
-};
 
 export default function Landing(props) {
 	
@@ -86,7 +65,8 @@ export default function Landing(props) {
                     </a>
                     <Zoom>
                         <div className="token-div u-flex-around u-flex-column">
-							<Countdown date={tsStartDate} renderer={renderer}/>
+                            <div className="token-div-top">Token Sale <span>STARTS</span> in</div>
+                            <div className="token-div-down">00:00:00</div>
                         </div>
                     </Zoom>
                     <div className="u-flex-around u-responsive-before">
