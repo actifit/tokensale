@@ -25,25 +25,25 @@ export default function Landing() {
                         <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>
                         <div>$ 100,000<br></br><br></br>4%</div>
                     </div>
-                    <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "45%" }}>
+                    <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "43%" }}>
                         <div>$ 30,000</div>
                         <div></div>
                         <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>
                         <div>$ 500,000<br></br><br></br>6%</div>
                     </div>
-                    <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "60%" }}>
+                    <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "55%" }}>
                         <div>$ 80,000</div>
                         <div></div>
                         <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>
                         <div>$ 1,000,000<br></br><br></br>8%</div>
                     </div>
-                    <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "75%" }}>
+                    <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "70%" }}>
                         <div>$ 135,000</div>
                         <div></div>
                         <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>
                         <div>$ 1,500,000<br></br><br></br>9%</div>
                     </div>
-                    <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "90%" }}>
+                    <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "85%" }}>
                         <div>$ 200,000</div>
                         <div></div>
                         <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>

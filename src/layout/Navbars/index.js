@@ -11,11 +11,134 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import ReactDOM from 'react-dom';
 import Countdown, { zeroPad, calcTimeDelta, formatTimeDelta } from 'react-countdown';
 
-// Random component
+//connectors to BSC for querying purposes
+import Web3 from 'web3';
+
+let tsStartDate = 1627920000000;
+let tsEndDate = 1628092800000;
+let minBnBAFIT, minBnBAFITX, maxBnBAFIT, maxBnBAFITX, pricePerAFIT, pricePerAFITX, hardCapBnbAmountAFIT, hardCapBnbAmountAFITX, totalDepositedBnbAFIT, totalDepositedBnbAFITX, fundsClaimableAFIT, fundsClaimableAFITX, tokensLeftAFIT, tokensLeftAFITX, totalTokensAFIT, totalTokensAFITX, investedBnBAFIT, investedBnBAFITX, claimableAFIT = 0, claimableAFITX = 0, claimedAFIT, claimedAFITX;
+
+const testNet = true;
+//mainnet
+let prov = 'https://bsc-dataseed1.binance.org:443';
+let tsAfitContract = '0x910c88A15738D16d48FF3696D6cc82bbbaF64809';
+let tsAfitxContract = '0x7DbAc451F65a969d507C78F6e471a257Ef45E10e';
+//testnet
+if (testNet){
+	prov = 'https://data-seed-prebsc-1-s1.binance.org:8545';
+	tsAfitContract = '0xa69ab8dd573daa5aebb3831da74d82461ba89c7b';
+	tsAfitxContract = '0x80980ef7dbba8dac421e58248ee0a281c5e73b19';
+}
+
+const web3 = new Web3(window.ethereum);//prov);
+
+import { afitAbi, afitxAbi, tsAbi } from 'abi/abis';
+
+//let tokenAbi = parsed;
+//const tgtAddress = "0x4Bd6571495913cE075dA637B300774e129c67CBE";
+//console.log(afitxAbi);
+let contractAFIT = new web3.eth.Contract(tsAbi, tsAfitContract);
+let contractAFITX = new web3.eth.Contract(tsAbi, tsAfitxContract);
+
+//console.log(contract.methods);
+/*
+contract.methods.getOwner().call().then(function(res){
+	console.log(res);
+});
+
+//get total supply
+*/
+//grab smart contract params AFIT
+contractAFIT.methods.minimumDepositBnbAmount().call().then(function (res){
+	(!isNaN(res)?minBnBAFIT = Web3.utils.fromWei(res):'');
+	//console.log('minimumDepositBnbAmount:'+minBnBAFIT);
+});
+contractAFIT.methods.maximumDepositBnbAmount().call().then(function (res){
+	(!isNaN(res)?maxBnBAFIT = Web3.utils.fromWei(res):'');
+	//console.log('maximumDepositBnbAmount:'+maxBnBAFIT);
+});
+contractAFIT.methods.presaleStartTimestamp().call().then(function (res){
+	//console.log('start time stamp:'+res);
+	tsStartDate = res * 1000;
+});
+contractAFIT.methods.presaleEndTimestamp().call().then(function (res){
+	//console.log('end time stamp:'+res);
+	tsEndDate = res * 1000;
+});
+contractAFIT.methods.rewardTokenPrice().call().then(function (res){
+	(!isNaN(res)?pricePerAFIT = Web3.utils.fromWei(res):'');
+	//console.log('rewardTokenPrice:'+pricePerAFIT);
+});
+contractAFIT.methods.hardCapBnbAmount().call().then(function (res){
+	(!isNaN(res)?hardCapBnbAmountAFIT = Web3.utils.fromWei(res):'');
+	//console.log('hardCapBnbAmount:'+hardCapBnbAmountAFIT);
+});
+contractAFIT.methods.totalDepositedBnbBalance().call().then(function (res){
+	(!isNaN(res)?totalDepositedBnbAFIT = Web3.utils.fromWei(res):'');
+	//console.log('totalDepositedBnbBalance:'+totalDepositedBnbAFIT);
+});
+contractAFIT.methods.fundsClaimable().call().then(function (res){
+	//console.log('fundsClaimable:'+res);
+	fundsClaimableAFIT = res;
+});
+contractAFIT.methods.tokensLeft().call().then(function (res){
+	(!isNaN(res)?tokensLeftAFIT = Web3.utils.fromWei(res):'');
+	//console.log('tokensLeft:'+tokensLeftAFIT);
+});
+contractAFIT.methods.totalTokens().call().then(function (res){
+	(!isNaN(res)?totalTokensAFIT = Web3.utils.fromWei(res):'');
+	//console.log('totalTokens:'+totalTokensAFIT);
+});
+
+
+//grab smart contract params AFITX
+contractAFITX.methods.minimumDepositBnbAmount().call().then(function (res){
+	(!isNaN(res)?minBnBAFITX = Web3.utils.fromWei(res):'');
+	//console.log('minimumDepositBnbAmount:'+minBnBAFITX);
+});
+contractAFITX.methods.maximumDepositBnbAmount().call().then(function (res){
+	(!isNaN(res)?maxBnBAFITX = Web3.utils.fromWei(res):'');
+	//console.log('maximumDepositBnbAmount:'+maxBnBAFITX);
+});
+/*contractAFIT.methods.presaleStartTimestamp().call().then(function (res){
+	console.log('start time stamp:'+res);
+	tsStartDate = res * 1000;
+});
+contractAFIT.methods.presaleEndTimestamp().call().then(function (res){
+	console.log('end time stamp:'+res);
+	tsEndDate = res * 1000;
+});*/
+contractAFITX.methods.rewardTokenPrice().call().then(function (res){
+	(!isNaN(res)?pricePerAFITX = Web3.utils.fromWei(res):'');
+	//console.log('rewardTokenPrice:'+pricePerAFITX);
+});
+contractAFITX.methods.hardCapBnbAmount().call().then(function (res){
+	(!isNaN(res)?hardCapBnbAmountAFITX = Web3.utils.fromWei(res):'');
+	//console.log('hardCapBnbAmount:'+hardCapBnbAmountAFITX);
+});
+contractAFITX.methods.totalDepositedBnbBalance().call().then(function (res){
+	(!isNaN(res)?totalDepositedBnbAFITX = Web3.utils.fromWei(res):'');
+	//console.log('totalDepositedBnbBalance:'+totalDepositedBnbAFITX);
+});
+contractAFITX.methods.fundsClaimable().call().then(function (res){
+	//console.log('fundsClaimable:'+res);
+	fundsClaimableAFITX = res;
+})
+contractAFITX.methods.tokensLeft().call().then(function (res){
+	(!isNaN(res)?tokensLeftAFITX = Web3.utils.fromWei(res):'');
+	//console.log('tokensLeft:'+tokensLeftAFITX);
+});
+contractAFITX.methods.totalTokens().call().then(function (res){
+	(!isNaN(res)?totalTokensAFITX = Web3.utils.fromWei(res):'');
+	//console.log('totalTokens:'+totalTokensAFITX);
+});
+
+
+
+// completion text
 const Completionist = () => <div className="token-div-top">Token Sale is <span>RUNNING!</span></div>;
 
-const tsStartDate = 1627920000000;
-const tsEndDate = 1628092800000;
+
 
 // Renderer callback with condition
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -37,6 +160,67 @@ export default function Landing(props) {
 	
 	const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(connect, reset, account);
 	const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;	
+	//load up account investments
+	//console.log(account);
+	
+	
+	if (account){
+		contractAFIT.methods.investments(account).call().then(function (res){
+			(!isNaN(res)?investedBnBAFIT = Web3.utils.fromWei(res):'');
+			//console.log('investments AFIT:'+investedBnBAFIT);
+			
+			//check if funds were claimed already
+			contractAFIT.methods.claimed(account).call().then(function (res){
+				claimedAFIT = res;
+				console.log('claimedAFIT:'+claimedAFIT);
+				if (!claimedAFIT){
+					contractAFIT.methods.claimableAmount().call({from:account}).then(function (res){
+						(!isNaN(res)?claimableAFIT = Web3.utils.fromWei(res):'');
+						//console.log('claimableAFIT:'+claimableAFIT);
+					}).catch(function(err){console.log(err); claimableAFIT = 0;});
+				}
+				
+			});
+			
+		}).catch(function(err){console.log(err)});
+		
+		contractAFITX.methods.investments(account).call().then(function (res){
+			(!isNaN(res)?investedBnBAFITX = Web3.utils.fromWei(res):'');
+			//console.log('investments AFITX:'+investedBnBAFITX);
+			//check if funds were claimed already
+			contractAFITX.methods.claimed(account).call().then(function (res){
+				
+				claimedAFITX = res;
+				console.log('claimedAFITX:'+claimedAFITX);
+				if (!claimedAFITX){
+					contractAFITX.methods.claimableAmount().call({from:account}).then(function (res){
+						(!isNaN(res)?claimableAFITX = Web3.utils.fromWei(res):'');
+						//console.log('claimableAFITX:'+claimableAFITX);
+					}).catch(function(err){console.log(err); claimableAFITX = 0;});
+				}
+				
+			});
+		}).catch(function(err){console.log(err)});
+		
+	}
+	
+	//sendData = () => {
+	let containerObj = new Object();
+	containerObj.investedBnBAFIT = investedBnBAFIT;
+	containerObj.investedBnBAFITX = investedBnBAFITX;
+	containerObj.claimableAFIT = claimableAFIT;
+	containerObj.claimableAFITX = claimableAFITX;
+	containerObj.fundsClaimableAFIT = fundsClaimableAFIT;
+	containerObj.fundsClaimableAFITX = fundsClaimableAFITX;
+	containerObj.contractAFIT = contractAFIT;
+	containerObj.contractAFITX = contractAFITX;
+	containerObj.claimedAFIT = claimedAFIT;
+	containerObj.claimedAFITX = claimedAFITX;
+	containerObj.account = account;
+	//console.log(containerObj);
+	props.parentCallback(containerObj);
+    //},
+	
 
     return (
         <div className="navbars">

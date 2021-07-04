@@ -13,12 +13,18 @@ import Aboutitem from '../component/Aboutitem';
 import Company from '../component/Company';
 import Footer from '../layout/Footer';
 import './style.css';
+
+let data;
+function callbackFunction (childData) {
+	data = childData;
+};
+
 function App() {
     return (
         <div className="App">
-            <Navbars />
+            <Navbars parentCallback = {callbackFunction}/>
             <Header />
-            <Invest />
+            <Invest data={data}/>
             <Graphicchart />
             <Reward />
             <Fund />
