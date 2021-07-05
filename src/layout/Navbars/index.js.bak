@@ -20,10 +20,12 @@ let minBnBAFIT, minBnBAFITX, maxBnBAFIT, maxBnBAFITX, pricePerAFIT, pricePerAFIT
 
 const testNet = true;
 //mainnet
+let prov = 'https://bsc-dataseed1.binance.org:443';
 let tsAfitContract = '0x910c88A15738D16d48FF3696D6cc82bbbaF64809';
 let tsAfitxContract = '0x7DbAc451F65a969d507C78F6e471a257Ef45E10e';
 //testnet
 if (testNet){
+	prov = 'https://data-seed-prebsc-1-s1.binance.org:8545';
 	tsAfitContract = '0xa69ab8dd573daa5aebb3831da74d82461ba89c7b';
 	tsAfitxContract = '0xb7A5E6e9e53518882f1E887F93cD3fD07806391E';
 }
@@ -92,12 +94,10 @@ contractAFIT.methods.totalTokens().call().then(function (res){
 //grab smart contract params AFITX
 contractAFITX.methods.minimumDepositBnbAmount().call().then(function (res){
 	(!isNaN(res)?minBnBAFITX = Web3.utils.fromWei(res):'');
-	//console.log(minBnBAFITX);
 	//console.log('minimumDepositBnbAmount:'+minBnBAFITX);
 });
 contractAFITX.methods.maximumDepositBnbAmount().call().then(function (res){
 	(!isNaN(res)?maxBnBAFITX = Web3.utils.fromWei(res):'');
-	//console.log(maxBnBAFITX);
 	//console.log('maximumDepositBnbAmount:'+maxBnBAFITX);
 });
 /*contractAFIT.methods.presaleStartTimestamp().call().then(function (res){
