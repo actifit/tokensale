@@ -18,7 +18,7 @@ let tsStartDate = 1627920000000;
 let tsEndDate = 1628092800000;
 let minBnBAFIT, minBnBAFITX, maxBnBAFIT, maxBnBAFITX, pricePerAFIT, pricePerAFITX, hardCapBnbAmountAFIT, hardCapBnbAmountAFITX, totalDepositedBnbAFIT, totalDepositedBnbAFITX, fundsClaimableAFIT, fundsClaimableAFITX, tokensLeftAFIT, tokensLeftAFITX, totalTokensAFIT, totalTokensAFITX, investedBnBAFIT, investedBnBAFITX, claimableAFIT = 0, claimableAFITX = 0, claimedAFIT, claimedAFITX;
 
-const testNet = true;
+const testNet = false;
 //mainnet
 let tsAfitContract = '0x910c88A15738D16d48FF3696D6cc82bbbaF64809';
 let tsAfitxContract = '0x7DbAc451F65a969d507C78F6e471a257Ef45E10e';
