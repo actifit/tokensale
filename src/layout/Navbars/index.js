@@ -14,6 +14,8 @@ import Countdown, { zeroPad, calcTimeDelta, formatTimeDelta } from 'react-countd
 //connectors to BSC for querying purposes
 import Web3 from 'web3';
 
+import { afitAbi, afitxAbi, tsAbi } from 'abi/abis';
+
 let tsStartDate = 1627920000000;
 let tsEndDate = 1628092800000;
 let minBnBAFIT, minBnBAFITX, maxBnBAFIT, maxBnBAFITX, pricePerAFIT, pricePerAFITX, hardCapBnbAmountAFIT, hardCapBnbAmountAFITX, totalDepositedBnbAFIT, totalDepositedBnbAFITX, fundsClaimableAFIT, fundsClaimableAFITX, tokensLeftAFIT, tokensLeftAFITX, totalTokensAFIT, totalTokensAFITX, investedBnBAFIT, investedBnBAFITX, claimableAFIT = 0, claimableAFITX = 0, claimedAFIT, claimedAFITX;
@@ -28,24 +30,25 @@ if (testNet){
 	tsAfitxContract = '0xb7A5E6e9e53518882f1E887F93cD3fD07806391E';
 }
 
-const web3 = new Web3(window.ethereum);
 
-import { afitAbi, afitxAbi, tsAbi } from 'abi/abis';
+async function launch(){
+	await window.ethereum.send('eth_requestAccounts')	
+}
+
+const web3 = new Web3(window.ethereum);
+let contractAFIT, contractAFITX;
+
+if (window.ethereum){
+
+	launch();
 
 //let tokenAbi = parsed;
 //const tgtAddress = "0x4Bd6571495913cE075dA637B300774e129c67CBE";
 //console.log(afitxAbi);
-let contractAFIT = new web3.eth.Contract(tsAbi, tsAfitContract);
-let contractAFITX = new web3.eth.Contract(tsAbi, tsAfitxContract);
+	contractAFIT = new web3.eth.Contract(tsAbi, tsAfitContract);
+	contractAFITX = new web3.eth.Contract(tsAbi, tsAfitxContract);
 
-//console.log(contract.methods);
-/*
-contract.methods.getOwner().call().then(function(res){
-	console.log(res);
-});
 
-//get total supply
-*/
 //grab smart contract params AFIT
 contractAFIT.methods.minimumDepositBnbAmount().call().then(function (res){
 	(!isNaN(res)?minBnBAFIT = Web3.utils.fromWei(res):'');
@@ -133,7 +136,7 @@ contractAFITX.methods.totalTokens().call().then(function (res){
 	//console.log('totalTokens:'+totalTokensAFITX);
 });
 
-
+}
 
 // completion text
 const Completionist = () => <div className="token-div-top">Token Sale is <span>RUNNING!</span></div>;
@@ -164,7 +167,7 @@ export default function Landing(props) {
 	//console.log(account);
 	
 	
-	if (account){
+	if (account && window.ethereum){
 		contractAFIT.methods.investments(account).call().then(function (res){
 			(!isNaN(res)?investedBnBAFIT = Web3.utils.fromWei(res):'');
 			//console.log('investments AFIT:'+investedBnBAFIT);
