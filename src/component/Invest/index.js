@@ -13,41 +13,46 @@ let buyAfitxOn = false;
 
 function claimAFITRewards(){
 	console.log('claiming AFIT');
-	console.log(glbprops.data.account);
+	//console.log(glbprops.data.account);
+	if (glbprops.data.contractAFIT){
 	glbprops.data.contractAFIT.methods.claimTokens().send({from: glbprops.data.account}).then(function(res){
 		console.log(res);
 	});
+}
 }
 
 function claimAFITXRewards(){
 	console.log('claiming AFITX');
 	//console.log(glbprops.data.account);
 	//console.log(glbprops.data.contractAFITX.methods);
-	
+	if (glbprops.data.contractAFITX){
 	glbprops.data.contractAFITX.methods.claimTokens().send({from: glbprops.data.account}).then(function(res){
 		console.log(res);
 	});
+}
 }
 
 function buyAfitConfirm(props){
 	let cancelAction = false;
 	if (bnbAfit < props.data.minBnBAFIT){ bnbAfit = props.data.minBnBAFIT;cancelAction = true; 
 	}
-	if (bnbAfit > props.data.maxBnBAFIT){ bnbAfit = props.data.maxBnBAFIT;;cancelAction = true;
+	if (bnbAfit > props.data.maxBnBAFIT){ bnbAfit = props.data.maxBnBAFIT;cancelAction = true;
 	}	
 	if (cancelAction){
 		return;
 	}else{
 		//console.log(window.web3.toWei(bnbAfit, "ether"));
+		if (glbprops.data.contractAFIT){
 		glbprops.data.contractAFIT.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfit, "ether")}).then(function(res){
 			console.log(res);
 		});
 	}
 }
+}
 
 function buyAfitxConfirm(props){
 	let cancelAction = false;
-	console.log(bnbAfitx);
+	//console.log(bnbAfitx);
 	if (bnbAfitx < props.data.minBnBAFITX){ bnbAfitx = props.data.minBnBAFITX;cancelAction = true; 
 	}
 	if (bnbAfitx > props.data.maxBnBAFITX){ bnbAfitx = props.data.maxBnBAFITX;cancelAction = true;
@@ -55,12 +60,14 @@ function buyAfitxConfirm(props){
 	if (cancelAction){
 		return;
 	}else{
-		console.log(bnbAfitx);
+		//console.log(bnbAfitx);
 		//console.log(window.web3.toWei(bnbAfitx, "ether"));
+		if (glbprops.data.contractAFITX){
 		glbprops.data.contractAFITX.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfitx, "ether")}).then(function(res){
 			console.log(res);
 		});
 	}
+}
 }
 //console.log(window.ethereum);
 
