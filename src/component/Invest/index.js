@@ -105,11 +105,10 @@ export default function Landing(props) {
                             Governance Token
                         </div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Core DeFi token </div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Further Decentralize Actifit </div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Voting </div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Decentralization Power</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Voting Rights</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Fit Loans</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Increase User Rank</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Core DeFi token </div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;User Rank Boost</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
                         <div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitxOn = true;}}>BUY AFITX </div>
 						
@@ -160,12 +159,12 @@ export default function Landing(props) {
                         <div className="u-invest-item-title2 u-flex-column">
                             Utility Token
                         </div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Buy fitness products</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Challenge your friends</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Gamification</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Participate in contests</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Increase User Rank</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Reward friends for tracking fitness activity</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Buy Fitness products</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Challenge friends</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Gamification Core</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Contest Engine</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;User Rank Boost</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Reward friends</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
                         <div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitOn = true; }}>BUY AFIT </div>
 						

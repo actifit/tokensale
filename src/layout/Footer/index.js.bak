@@ -14,64 +14,65 @@ export default function Landing(props) {
                 </a>
                 <div className="footer-top-items u-responsive-before">
                     <a>Company</a><br></br>
-                    <a href="https://actifit.io">About Us</a><br></br>
-                    <a href="https://actifit.io/#team">Team</a><br></br>
-                    <a href="https://actifit.io/#partners">Partners</a><br></br>
+                    <a>About Us</a><br></br>
+                    <a>Team</a><br></br>
+                    <a>Partners</a><br></br>
                 </div>
                 <div className="footer-top-items u-responsive-before">
                     <a>Support </a><br></br>
-                    <a href="mailto:info@actifit.io">Contact Us</a><br></br>
-                    <a href="https://actifit.io/privacy-policy">Privacy policy</a><br></br>
-                    <a href="https://actifit.io/terms-conditions">Terms & Conditions</a><br></br>
+                    <a>Contact Us</a><br></br>
+                    <a>Privacy policy</a><br></br>
+                    <a>Term of use</a><br></br>
                 </div>
                 <div className="footer-top-items u-responsive-before">
-                    <a href="https://actifit.io">www.actifit.io</a><br></br>
-                    <a href="https://actifit.io/activity">Activity Feed</a><br></br>
-                    <a href="https://actifit.io/market">Market</a><br></br>
-                    <a href="https://actifit.io/#news">News</a><br></br>
+                    <a>www.actifit.io</a><br></br>
+                    <a>Activity Feed</a><br></br>
+                    <a>Market</a><br></br>
+                    <a>News</a><br></br>
                 </div>
                 <div className="footer-top-items u-responsive-before">
                     <a className="u-responsive-before"> </a><br></br>
-                    <a href="https://actifit.io/yieldfarming">Yield farming</a><br></br>
-                    <a href="https://actifit.io/delegators">Delegators</a><br></br>
-                    <a href="https://actifit.io/leaderboard">Leaderboard</a><br></br>
+                    <a>Yield farming</a><br></br>
+                    <a>Delegators</a><br></br>
+                    <a>Leaderboard</a><br></br>
                 </div>
                 <div className="u-flex-between u-responsive-after">
                     <div className="footer-top-items">
-						<a href="https://actifit.io">About Us</a><br></br>
-						<a href="https://actifit.io/#team">Team</a><br></br>
-						<a href="https://actifit.io/#partners">Partners</a><br></br>
+                        <a>Company</a><br></br>
+                        <a>About Us</a><br></br>
+                        <a>Team</a><br></br>
+                        <a>Partners</a><br></br>
                     </div>
                     <div className="footer-top-items">
                         <a>Support </a><br></br>
-						<a href="mailto:info@actifit.io">Contact Us</a><br></br>
-						<a href="https://actifit.io/privacy-policy">Privacy policy</a><br></br>
-						<a href="https://actifit.io/terms-conditions">Terms & Conditions</a><br></br>
+                        <a>Contact Us</a><br></br>
+                        <a>Privacy policy</a><br></br>
+                        <a>Term of use</a><br></br>
                     </div>
                 </div>
                 <div className="u-flex-between u-responsive-after">
                     <div className="footer-top-items">
-						<a href="https://actifit.io">www.actifit.io</a><br></br>
-						<a href="https://actifit.io/activity">Activity Feed</a><br></br>
-						<a href="https://actifit.io/market">Market</a><br></br>
-						<a href="https://actifit.io/#news">News</a><br></br>
+                        <a>www.actifit.io</a><br></br>
+                        <a>Activity Feed</a><br></br>
+                        <a>Market</a><br></br>
+                        <a>News</a><br></br>
                     </div>
                     <div className="footer-top-items">
                         <a className="u-responsive-before"> </a><br></br>
-						<a href="https://actifit.io/yieldfarming">Yield farming</a><br></br>
-						<a href="https://actifit.io/delegators">Delegators</a><br></br>
-						<a href="https://actifit.io/leaderboard">Leaderboard</a><br></br>
+                        <a>Yield farming</a><br></br>
+                        <a>Delegators</a><br></br>
+                        <a>Leaderboard</a><br></br>
                     </div>
                 </div>
                 <div className="footer-top-items">
                     <a className="u-responsive-before"> </a><br></br>
-                    <a href="https://actifit.io/whitepaper/Actifit_White_Paper.pdf">Whitepaper</a><br></br>
-                    <a href="https://actifit.io/referrals">Refer a friend</a><br></br>
+                    <a>Whitepaper</a><br></br>
+                    <a>Refer a friend</a><br></br>
                     <a className="u-responsive-before"></a><br></br>
                 </div>
             </div>
             <div className="footer-down u-flex-between u-responsive">
-                <div><a href="https://actifit.io/privacy-policy">Privacy policy</a>|<a href="https://actifit.io/terms-conditions">Terms & Conditions</a></div>
+                <div>Terms of Service Privacy Policy Security</div>
                 <div className="social-icons u-flex-between u-responsive">
                     <div className="u-u-flex-around">
                         <a href="https://www.facebook.com/Actifit.fitness/" target="_blank"><img src="/assets/img/facebook.svg" /></a>
