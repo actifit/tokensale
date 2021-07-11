@@ -6,10 +6,14 @@ import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import './style.css';
 import Navbars from '../../layout/Navbars';
+
 let glbprops;
 let bnbAfit = 0, bnbAfitx = 0;
 let buyAfitOn = false;
 let buyAfitxOn = false;
+let bnbInvestTotal = 0;
+
+
 
 function claimAFITRewards(){
 	console.log('claiming AFIT');
@@ -33,6 +37,9 @@ function claimAFITXRewards(){
 }
 
 function buyAfitConfirm(props){
+	if (!glbprops.data.account){
+		return;
+	}
 	let cancelAction = false;
 	if (bnbAfit < props.data.minBnBAFIT){ bnbAfit = props.data.minBnBAFIT;cancelAction = true; 
 	}
@@ -51,6 +58,9 @@ function buyAfitConfirm(props){
 }
 
 function buyAfitxConfirm(props){
+	if (!glbprops.data.account){
+		return;
+	}
 	let cancelAction = false;
 	//console.log(bnbAfitx);
 	if (bnbAfitx < props.data.minBnBAFITX){ bnbAfitx = props.data.minBnBAFITX;cancelAction = true; 
@@ -72,16 +82,37 @@ function buyAfitxConfirm(props){
 //console.log(window.ethereum);
 
 export default function Landing(props) {
+	
+	const afitBuyHandler = () => {
+		buyAfitOn = true; 
+		setCount(count + 1)
+		//setState({count: state.count + 1})
+		//forceUpdateUI();
+		//useForceUpdate();
+	}
+
+	const afitxBuyHandler = () => {
+		buyAfitxOn = true;
+		setCount(count + 1)
+		//setState({count: state.count + 1})
+		//forceUpdateUI();
+	}
+	
 	glbprops = props;
 	//console.log('invest');
 	//console.log(props.data);
 
+	const [count, setCount] = useState(0);
+	
+	if (glbprops.data){
+		bnbInvestTotal = parseFloat(glbprops.data.totalDepositedBnbAFIT) + parseFloat(glbprops.data.totalDepositedBnbAFITX);
+	}
     return (
         <div className="u-invest u-flex-around u-flex-column">
             <Zoom>
                 <div className="u-invest-var">
                     <div className="u-flex-between">
-                        <div>Total Contributed:</div>
+                        <div>Total Contributed: {bnbInvestTotal} BNB</div>
                         <div>Total Rewards: $200,000</div>
                     </div>
                     <div className="u-invest-var-main">
@@ -110,7 +141,7 @@ export default function Landing(props) {
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Fit Loans</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;User Rank Boost</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
-                        <div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitxOn = true;}}>BUY AFITX </div>
+                        <div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {afitxBuyHandler()}}>BUY AFITX </div>
 						
 						{buyAfitxOn?
 							(
@@ -159,14 +190,14 @@ export default function Landing(props) {
                         <div className="u-invest-item-title2 u-flex-column">
                             Utility Token
                         </div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Buy Fitness products</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Buy Fitness Products</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Challenge friends</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Gamification Core</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Contest Engine</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;User Rank Boost</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Reward friends</div>
+                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Reward Friends</div>
                         <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
-                        <div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitOn = true; }}>BUY AFIT </div>
+                        <div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {afitBuyHandler()}}>BUY AFIT </div>
 						
 						{buyAfitOn?
 							(
@@ -213,7 +244,7 @@ export default function Landing(props) {
             <div id="buy" className="u-invest-items u-responsive-before" style={{ marginTop: "0" }}>
                 <Zoom>
                     <div className="u-invest-item">
-						<div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitxOn = true; }}>BUY AFITX </div>
+						<div className="u-flex-around invest-btn u-btn" onClick={() => {afitxBuyHandler()}}>BUY AFITX </div>
 						
 						{buyAfitxOn?
 							(
@@ -256,7 +287,7 @@ export default function Landing(props) {
                 </Zoom>
                 <Zoom>
                     <div className="u-invest-item">
-                        <div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitOn = true; }}>BUY AFIT </div>
+                        <div className="u-flex-around invest-btn u-btn" onClick={() => {afitBuyHandler()}}>BUY AFIT </div>
 						
 						{buyAfitOn?
 							(

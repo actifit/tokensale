@@ -12,8 +12,8 @@ let bnbAfit = 0, bnbAfitx = 0;
 let buyAfitOn = false;
 let buyAfitxOn = false;
 let bnbInvestTotal = 0;
-
-
+let buyAfitProgress = false;
+let buyAfitxProgress = false;
 
 function claimAFITRewards(){
 	console.log('claiming AFIT');
@@ -36,43 +36,6 @@ function claimAFITXRewards(){
 }
 }
 
-function buyAfitConfirm(props){
-	let cancelAction = false;
-	if (bnbAfit < props.data.minBnBAFIT){ bnbAfit = props.data.minBnBAFIT;cancelAction = true; 
-	}
-	if (bnbAfit > props.data.maxBnBAFIT){ bnbAfit = props.data.maxBnBAFIT;cancelAction = true;
-	}	
-	if (cancelAction){
-		return;
-	}else{
-		//console.log(window.web3.toWei(bnbAfit, "ether"));
-		if (glbprops.data.contractAFIT){
-		glbprops.data.contractAFIT.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfit, "ether")}).then(function(res){
-			console.log(res);
-		});
-	}
-}
-}
-
-function buyAfitxConfirm(props){
-	let cancelAction = false;
-	//console.log(bnbAfitx);
-	if (bnbAfitx < props.data.minBnBAFITX){ bnbAfitx = props.data.minBnBAFITX;cancelAction = true; 
-	}
-	if (bnbAfitx > props.data.maxBnBAFITX){ bnbAfitx = props.data.maxBnBAFITX;cancelAction = true;
-	}	
-	if (cancelAction){
-		return;
-	}else{
-		//console.log(bnbAfitx);
-		//console.log(window.web3.toWei(bnbAfitx, "ether"));
-		if (glbprops.data.contractAFITX){
-		glbprops.data.contractAFITX.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfitx, "ether")}).then(function(res){
-			console.log(res);
-		});
-	}
-}
-}
 //console.log(window.ethereum);
 
 export default function Landing(props) {
@@ -91,6 +54,80 @@ export default function Landing(props) {
 		//setState({count: state.count + 1})
 		//forceUpdateUI();
 	}
+	
+	
+function buyAfitConfirm(props){
+	if (!glbprops.data.account){
+			alert('Please connect your account first');
+		return;
+	}
+	let cancelAction = false;
+	if (bnbAfit < props.data.minBnBAFIT){ bnbAfit = props.data.minBnBAFIT;cancelAction = true; 
+	}
+	if (bnbAfit > props.data.maxBnBAFIT){ bnbAfit = props.data.maxBnBAFIT;cancelAction = true;
+	}	
+	if (cancelAction){
+		return;
+	}else{
+		//console.log(window.web3.toWei(bnbAfit, "ether"));
+		if (glbprops.data.contractAFIT){
+				buyAfitProgress = true;
+				setCount(count + 1);
+		glbprops.data.contractAFIT.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfit, "ether")}).then(function(res){
+			console.log(res);
+					if (res.blockNumber && res.status){
+						console.log('success');
+						//success
+						//refresh data
+						setCount(count + 1);
+					}
+					buyAfitProgress = false;
+					setCount(count + 1);
+				}).catch(function(err){
+					buyAfitProgress = false;
+					setCount(count + 1);
+					console.log(err);
+		});
+	}
+}
+}
+
+function buyAfitxConfirm(props){
+	if (!glbprops.data.account){
+			alert('Please connect your account first');
+		return;
+	}
+	let cancelAction = false;
+	//console.log(bnbAfitx);
+	if (bnbAfitx < props.data.minBnBAFITX){ bnbAfitx = props.data.minBnBAFITX;cancelAction = true; 
+	}
+	if (bnbAfitx > props.data.maxBnBAFITX){ bnbAfitx = props.data.maxBnBAFITX;cancelAction = true;
+	}	
+	if (cancelAction){
+		return;
+	}else{
+		//console.log(bnbAfitx);
+		//console.log(window.web3.toWei(bnbAfitx, "ether"));
+		if (glbprops.data.contractAFITX){
+				buyAfitxProgress = true;
+				setCount(count + 1);
+		glbprops.data.contractAFITX.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfitx, "ether")}).then(function(res){
+			console.log(res);
+					if (res.blockNumber && res.status){
+						//success
+						//refresh data
+						setCount(count + 1);
+					}
+					buyAfitxProgress = false;
+					setCount(count + 1);
+				}).catch(function(err){
+					buyAfitxProgress = false;
+					setCount(count + 1);
+					console.log(err);
+		});
+	}
+}
+}
 	
 	glbprops = props;
 	//console.log('invest');
@@ -155,7 +192,13 @@ export default function Landing(props) {
 									bnbAfitx = evt.target.value; 
 								}}	
 								/></label>
-								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitxConfirm(props)}}>Proceed</div>
+								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitxConfirm(props)}}>Proceed
+								{ 
+									buyAfitxProgress ?	
+									(<img src="/assets/img/Spinner-1s-200px.svg" className="spinner-img"/>)
+									:(<span></span>)
+								}
+								</div>
 							</div>
 							):(<span></span>)
 						}
@@ -211,7 +254,13 @@ export default function Landing(props) {
 									bnbAfit = evt.target.value; 
 								}}	
 								/></label>
-								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitConfirm(props)}}>Proceed</div>
+								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitConfirm(props)}}>Proceed
+								{ 
+									buyAfitProgress ?	
+									(<img src="/assets/img/Spinner-1s-200px.svg" className="spinner-img"/>)
+									:(<span></span>)
+								}
+								</div>
 							</div>
 							):(<span></span>)
 						}
@@ -258,7 +307,13 @@ export default function Landing(props) {
 								bnbAfitx = evt.target.value; 
 							}}	
 							/></label>
-							<div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitxConfirm(props)}}>Proceed</div>
+							<div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitxConfirm(props)}}>Proceed
+							{ 
+									buyAfitxProgress ?	
+									(<img src="/assets/img/Spinner-1s-200px.svg" className="spinner-img"/>)
+									:(<span></span>)
+								}
+							</div>
 							</div>
 							):(<span></span>)
 						}
@@ -301,7 +356,13 @@ export default function Landing(props) {
 									bnbAfit = evt.target.value; 
 								}}	
 								/></label>
-								<div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitConfirm(props)}}>Proceed</div>
+								<div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitConfirm(props)}}>
+								Proceed
+								{ buyAfitProgress ?	
+									(<img src="/assets/img/Spinner-1s-200px.svg" className="spinner-img"/>)
+									:(<span></span>)
+								}
+								</div>
 							</div>
 							):(<span></span>)
 						}
