@@ -193,7 +193,7 @@ function buyAfitxConfirm(props){
 									setCount(count + 1)
 								}}	
 								/></label>
-								<span>Matching AFITX: {bnbAfitx / glbprops.data.pricePerAFITX}</span>
+								<span className="u-responsive-after">Matching AFITX: {bnbAfitx / glbprops.data.pricePerAFITX}</span>
 								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitxConfirm(props)}}>Proceed
 								{ 
 									buyAfitxProgress ?	
@@ -257,7 +257,7 @@ function buyAfitxConfirm(props){
 									setCount(count + 1)
 								}}	
 								/></label>
-								<span>Matching AFIT: {bnbAfit / glbprops.data.pricePerAFIT}</span>
+								<span className="u-responsive-after">Matching AFIT: {bnbAfit / glbprops.data.pricePerAFIT}</span>
 								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitConfirm(props)}}>Proceed
 								{ 
 									buyAfitProgress ?	
