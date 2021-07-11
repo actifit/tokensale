@@ -232,6 +232,8 @@ export default function Landing(props) {
 	containerObj.maxBnBAFIT = maxBnBAFIT; 
 	containerObj.maxBnBAFITX = maxBnBAFITX;
 	containerObj.web3 = web3;
+	containerObj.pricePerAFIT = pricePerAFIT;
+	containerObj.pricePerAFITX = pricePerAFITX;
 	//console.log(containerObj);
 	props.parentCallback(containerObj);
     //},

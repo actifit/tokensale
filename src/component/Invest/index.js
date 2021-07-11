@@ -183,15 +183,17 @@ function buyAfitxConfirm(props){
 									if (evt.target.value < 0) evt.target.value = props.data.minBnBAFITX; 
 									if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
 									bnbAfitx = evt.target.value; 
-									
+									setCount(count + 1)
 									}} 
 									
 								onBlur={(evt) => {
 									if (evt.target.value < props.data.minBnBAFITX) evt.target.value = props.data.minBnBAFITX; 
 									if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
 									bnbAfitx = evt.target.value; 
+									setCount(count + 1)
 								}}	
 								/></label>
+								<span>Matching AFITX: {bnbAfitx / glbprops.data.pricePerAFITX}</span>
 								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitxConfirm(props)}}>Proceed
 								{ 
 									buyAfitxProgress ?	
@@ -245,15 +247,17 @@ function buyAfitxConfirm(props){
 									if (evt.target.value < 0) evt.target.value = props.data.minBnBAFIT; 
 									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
 									bnbAfit = evt.target.value; 
-									
+									setCount(count + 1)
 									}} 
 									
 								onBlur={(evt) => {
 									if (evt.target.value < props.data.minBnBAFIT) evt.target.value = props.data.minBnBAFIT; 
 									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
 									bnbAfit = evt.target.value; 
+									setCount(count + 1)
 								}}	
 								/></label>
+								<span>Matching AFIT: {bnbAfit / glbprops.data.pricePerAFIT}</span>
 								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitConfirm(props)}}>Proceed
 								{ 
 									buyAfitProgress ?	
@@ -298,15 +302,17 @@ function buyAfitxConfirm(props){
 								if (evt.target.value < 0) evt.target.value = props.data.minBnBAFITX; 
 								if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
 								bnbAfitx = evt.target.value; 
-								
+								setCount(count + 1)
 								}} 
 								
 							onBlur={(evt) => {
 								if (evt.target.value < props.data.minBnBAFITX) evt.target.value = props.data.minBnBAFITX; 
 								if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
 								bnbAfitx = evt.target.value; 
+								setCount(count + 1)
 							}}	
 							/></label>
+							<span>Matching AFITX: {bnbAfitx / glbprops.data.pricePerAFITX}</span>
 							<div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitxConfirm(props)}}>Proceed
 							{ 
 									buyAfitxProgress ?	
@@ -347,15 +353,17 @@ function buyAfitxConfirm(props){
 									if (evt.target.value < 0) evt.target.value = props.data.minBnBAFIT; 
 									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
 									bnbAfit = evt.target.value; 
-									
+									setCount(count + 1)
 									}} 
 									
 								onBlur={(evt) => {
 									if (evt.target.value < props.data.minBnBAFIT) evt.target.value = props.data.minBnBAFIT; 
 									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
 									bnbAfit = evt.target.value; 
+									setCount(count + 1)
 								}}	
 								/></label>
+								<span>Matching AFIT: {(bnbAfit / glbprops.data.pricePerAFIT)}</span>
 								<div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitConfirm(props)}}>
 								Proceed
 								{ buyAfitProgress ?	
