@@ -6,7 +6,7 @@ export default function Landing(props) {
     return (
         <div className="footer">
             <div className="footer-background u-responsive-before">
-                <img src="../../images/footer_back.png" />
+                <img src="/images/footer_back.png" />
             </div>
             <div className="footer-top u-flex-between u-responsive">
                 <a className="footer-logo-div u-flex-around u-flex-column">

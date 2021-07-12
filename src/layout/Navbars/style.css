@@ -27,7 +27,7 @@
 .navbars-down {
     padding: 0 10% 50px 10%;
     height: 150px;
-    background-image: url('../../images/navbar_down.svg');
+    background-image: url('/images/navbar_down.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
