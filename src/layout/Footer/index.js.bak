@@ -71,7 +71,7 @@ export default function Landing(props) {
                 </div>
             </div>
             <div className="footer-down u-flex-between u-responsive">
-                <div><a href="https://actifit.io/privacy-policy">Privacy policy</a>&nbsp;|&nbsp;<a href="https://actifit.io/terms-conditions">Terms & Conditions</a></div>
+                <div><a href="https://actifit.io/privacy-policy">Privacy policy</a>|<a href="https://actifit.io/terms-conditions">Terms & Conditions</a></div>
                 <div className="social-icons u-flex-between u-responsive">
                     <div className="u-u-flex-around">
                         <a href="https://www.facebook.com/Actifit.fitness/" target="_blank"><img src="/assets/img/facebook.svg" /></a>

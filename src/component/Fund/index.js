@@ -16,8 +16,8 @@ export default function Landing() {
                         <div className="u-fund-body-item">
                             <div className="u-fund-body-item-num u-flex-around">30%</div>
                             <div>
-                                <div className="u-fund-body-item-title">PROVIDING LIQUIDITY</div>
-                                <div className="u-fund-body-item-desc">to the different farms, pools and kick off the Actifit DeFi project liquidity. </div>
+                                <div className="u-fund-body-item-title">LOCKED LIQUIDITY</div>
+                                <div className="u-fund-body-item-desc">30% of the token sale funds will be locked for a minimum of 1 year to provide solid long term liquidity for AFIT, AFITX tokens, and Actifit DeFi project.</div>
                             </div>
                         </div>
                     </Zoom>
@@ -25,8 +25,8 @@ export default function Landing() {
                         <div className="u-fund-body-item">
                             <div className="u-fund-body-item-num u-flex-around">10%</div>
                             <div>
-                                <div className="u-fund-body-item-title">ALLOCATING REWARDS</div>
-                                <div className="u-fund-body-item-desc">back to random and top participants of the token sale.</div>
+                                <div className="u-fund-body-item-title">PARTICIPANT REWARDS</div>
+                                <div className="u-fund-body-item-desc">10% will be distributed back to random, top participants, as well as extra AFITX rewards to first 200 participants in the token sale.</div>
                             </div>
                         </div>
                     </Zoom>
@@ -34,8 +34,8 @@ export default function Landing() {
                         <div className="u-fund-body-item">
                             <div className="u-fund-body-item-num u-flex-around">10%</div>
                             <div>
-                                <div className="u-fund-body-item-title">BUYING HIVE TOKEN</div>
-                                <div className="u-fund-body-item-desc">as an attribution to our original Actifit blockchain - Hive, and will be powered up to help grow the ecosystem and reward Actifit app users.</div>
+                                <div className="u-fund-body-item-title">HIVE TOKEN PURCHASE</div>
+                                <div className="u-fund-body-item-desc">As an attribution to our original Actifit blockchain - Hive, 10% of token sale funds will be used to buy and power up HIVE, to help grow the ecosystem and reward Actifit app users.</div>
                             </div>
                         </div>
                     </Zoom>
@@ -45,8 +45,8 @@ export default function Landing() {
                         <div className="u-fund-body-item">
                             <div className="u-fund-body-item-num u-flex-around">30%</div>
                             <div>
-                                <div className="u-fund-body-item-title">FUNDING</div>
-                                <div className="u-fund-body-item-desc">the development effort on Actifit and Actifit DeFi.</div>
+                                <div className="u-fund-body-item-title">PROJECT DEVELOPMENT</div>
+                                <div className="u-fund-body-item-desc">30% will be used to fund the continuous coding and development effort on Actifit and Actifit DeFi.</div>
                             </div>
                         </div>
                     </Zoom>
@@ -54,8 +54,8 @@ export default function Landing() {
                         <div className="u-fund-body-item">
                             <div className="u-fund-body-item-num u-flex-around">10%</div>
                             <div>
-                                <div className="u-fund-body-item-title">MARKETING EFFORT</div>
-                                <div className="u-fund-body-item-desc"></div>
+                                <div className="u-fund-body-item-title">MARKETING</div>
+                                <div className="u-fund-body-item-desc">10% of the funds will be used to expand Actifit and Actifit DeFi marketing channels and reach.</div>
                             </div>
                         </div>
                     </Zoom>
@@ -64,7 +64,7 @@ export default function Landing() {
                             <div className="u-fund-body-item-num u-flex-around">10%</div>
                             <div>
                                 <div className="u-fund-body-item-title">PROJECT GROWTH & PARTNERSHIPS</div>
-                                <div className="u-fund-body-item-desc"></div>
+                                <div className="u-fund-body-item-desc">10% of the funds will be used to entice collaborations with major players in DeFi and relevant fields.</div>
                             </div>
                         </div>
                     </Zoom>
