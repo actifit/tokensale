@@ -64,7 +64,7 @@
         padding: 0;
     }
     .footer {
-        background-image: url('/images/footer_back.svg');
+        background-image: url('../../images/footer_back.svg');
         background-position: 60%;
         padding: 0px 10% 50px 10%;
     }
