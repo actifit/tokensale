@@ -148,7 +148,7 @@ function buyAfitxConfirm(props){
                     </div>
                     <div className="u-invest-var-main">
                         <div>
-                            <img className="u-invest-var-main-color" src="/assets/img/bar_back.png" style={{ width: "70%" }} />
+                            <img className="u-invest-var-main-color" src="/images/bar_back.png" style={{ width: "70%" }} />
                             <div className="u-invest-var-main-num" style={{ left: "70%" }}>70%</div>
                         </div>
                     </div>
@@ -161,17 +161,17 @@ function buyAfitxConfirm(props){
                     <div id="buy" className="u-invest-item">
                         <div className="u-invest-item-title1 u-flex-around u-flex-column">
                             AFITX
-                            <img src="/assets/img/afitx_small.png" />
+                            <img src="/images/afitx_small.png" />
                         </div>
                         <div className="u-invest-item-title2 u-flex-column">
                             Governance Token
                         </div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Core DeFi token </div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Decentralization Power</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Voting Rights</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Fit Loans</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;User Rank Boost</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Core DeFi token </div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Decentralization Power</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Voting Rights</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Fit Loans</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;User Rank Boost</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
                         <div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {afitxBuyHandler()}}>BUY AFITX </div>
 						
 						{buyAfitxOn?
@@ -197,7 +197,7 @@ function buyAfitxConfirm(props){
 								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitxConfirm(props)}}>Proceed
 								{ 
 									buyAfitxProgress ?	
-									(<img src="/assets/img/Spinner-1s-200px.svg" className="spinner-img"/>)
+									(<img src="/images/Spinner-1s-200px.svg" className="spinner-img"/>)
 									:(<span></span>)
 								}
 								</div>
@@ -224,18 +224,18 @@ function buyAfitxConfirm(props){
                     <div className="u-invest-item">
                         <div className="u-invest-item-title1 u-flex-around u-flex-column">
                             AFIT
-                            <img src="/assets/img/afit_small.png" />
+                            <img src="/images/afit_small.png" />
                         </div>
                         <div className="u-invest-item-title2 u-flex-column">
                             Utility Token
                         </div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Buy Fitness Products</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Challenge friends</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Gamification Core</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Contest Engine</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;User Rank Boost</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Reward Friends</div>
-                        <div className="u-invest-item-list"> <img src="/assets/img/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Buy Fitness Products</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Challenge friends</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Gamification Core</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Contest Engine</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;User Rank Boost</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Reward Friends</div>
+                        <div className="u-invest-item-list"> <img src="/images/list.svg" />&nbsp;&nbsp;Yield Farms, Pools & Vaults (Workouts & Shakes) </div>
                         <div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {afitBuyHandler()}}>BUY AFIT </div>
 						
 						{buyAfitOn?
@@ -261,7 +261,7 @@ function buyAfitxConfirm(props){
 								<div className="u-flex-around invest-btn u-btn u-responsive-after" onClick={() => {buyAfitConfirm(props)}}>Proceed
 								{ 
 									buyAfitProgress ?	
-									(<img src="/assets/img/Spinner-1s-200px.svg" className="spinner-img"/>)
+									(<img src="/images/Spinner-1s-200px.svg" className="spinner-img"/>)
 									:(<span></span>)
 								}
 								</div>
@@ -316,7 +316,7 @@ function buyAfitxConfirm(props){
 							<div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitxConfirm(props)}}>Proceed
 							{ 
 									buyAfitxProgress ?	
-									(<img src="/assets/img/Spinner-1s-200px.svg" className="spinner-img"/>)
+									(<img src="/images/Spinner-1s-200px.svg" className="spinner-img"/>)
 									:(<span></span>)
 								}
 							</div>
@@ -367,7 +367,7 @@ function buyAfitxConfirm(props){
 								<div className="u-flex-around invest-btn u-btn" onClick={() => {buyAfitConfirm(props)}}>
 								Proceed
 								{ buyAfitProgress ?	
-									(<img src="/assets/img/Spinner-1s-200px.svg" className="spinner-img"/>)
+									(<img src="/images/Spinner-1s-200px.svg" className="spinner-img"/>)
 									:(<span></span>)
 								}
 								</div>
@@ -395,7 +395,7 @@ function buyAfitxConfirm(props){
 					
                 </Zoom>
             </div>
-            <img className="invest_money" src="/assets/img/money1.png" />
+            <img className="invest_money" src="/images/money1.png" />
         </div>
     );
 }

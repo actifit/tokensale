@@ -244,11 +244,11 @@ export default function Landing(props) {
             <div className="navbars-top u-flex-between">
                 <a href="https://actifit.io" className="Actifit-btn u-flex-around u-btn u-responsive-before" target="_blank">Actifit.io</a>
                 <div className="social-icons u-flex-between u-responsive-before">
-                    <a href="https://www.facebook.com/Actifit.fitness/" target="_blank"><img src="/assets/img/facebook.svg" /></a>
-                    <a href="https://www.instagram.com/actifit.fitness/" target="_blank"><img src="/assets/img/instagram.svg" /></a>
-                    <a href="https://discord.gg/aHtcA6r" target="_blank"><img src="/assets/img/cartoon.svg" /></a>
-                    <a href="https://www.twitter.com/Actifit_fitness" target="_blank"><img src="/assets/img/twitter.svg" /></a>
-                    <a href="https://t.me/actifit" target="_blank"><img src="/assets/img/ariplane.svg" /></a>
+                    <a href="https://www.facebook.com/Actifit.fitness/" target="_blank"><img src="/images/facebook.svg" /></a>
+                    <a href="https://www.instagram.com/actifit.fitness/" target="_blank"><img src="/images/instagram.svg" /></a>
+                    <a href="https://discord.gg/aHtcA6r" target="_blank"><img src="/images/cartoon.svg" /></a>
+                    <a href="https://www.twitter.com/Actifit_fitness" target="_blank"><img src="/images/twitter.svg" /></a>
+                    <a href="https://t.me/actifit" target="_blank"><img src="/images/ariplane.svg" /></a>
                 </div>
                 <div className="u-flex-around u-responsive-after">
                     <a href="https://actifit.io/#team" className="Connect-btn-a u-flex-around" target="_blank">Team</a>
@@ -282,7 +282,7 @@ export default function Landing(props) {
             <div className="navbars-down u-flex-between u-flex-column">
                 <div className="u-flex-between navbars-down-top u-responsive">
                     <a className="logo-div u-flex-around u-flex-column">
-                        <img src="/assets/img/logo.svg" />
+                        <img src="/images/logo.svg" />
                         <div>From the Creators of Actifit</div>
                     </a>
                     <Zoom>

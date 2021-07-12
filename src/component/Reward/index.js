@@ -19,7 +19,7 @@ export default function Landing() {
             <div className="u-reward-body u-flex-between u-responsive">
                 <Fade left>
                     <div className="u-reward-body-item">
-                        <img src="/assets/img/hand.svg" />
+                        <img src="/images/hand.svg" />
                         <div className="u-flex-around">
                             <div className="u-reward-body-title u-flex-around">5</div>
                             <div className="u-reward-body-body u-flex-around">Random Winners sharing up to 100,000$ </div>
@@ -28,7 +28,7 @@ export default function Landing() {
                 </Fade>
                 <Fade up>
                     <div className="u-reward-body-item">
-                        <img src="/assets/img/star.svg" />
+                        <img src="/images/star.svg" />
                         <div className="u-flex-around">
                             <div className="u-reward-body-title">5</div>
                             <div className="u-reward-body-body">Top Investors sharing up to 100,000$</div>
@@ -37,7 +37,7 @@ export default function Landing() {
                 </Fade>
                 <Fade right>
                     <div className="u-reward-body-item">
-                        <img src="/assets/img/graphic.svg" />
+                        <img src="/images/graphic.svg" />
                         <div className="u-flex-around">
                             <div className="u-reward-body-title">200</div>
                             <div className="u-reward-body-body">First Investors to Receive extra AFITX airdrop</div>

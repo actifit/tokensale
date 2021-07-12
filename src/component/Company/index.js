@@ -16,25 +16,25 @@ export default function Landing() {
             </Fade>
             <div>
                 <Zoom>
-                    <div className="u-flex-around"><a href="https://ark.io/" target="_blank"><img src="/assets/img/company1.svg" /></a></div>
+                    <div className="u-flex-around"><a href="https://ark.io/" target="_blank"><img src="/images/company1.svg" /></a></div>
                 </Zoom>
                 <Zoom>
-                    <div className="u-flex-around"><a href="https://actifit.io/@adventureready" target="_blank"><img src="/assets/img/company2.svg" /></a></div>
+                    <div className="u-flex-around"><a href="https://actifit.io/@adventureready" target="_blank"><img src="/images/company2.svg" /></a></div>
                 </Zoom>
                 <Zoom>
-                    <div className="u-flex-around"><a href="https://sportstalksocial.com/" target="_blank"><img src="/assets/img/company3.svg" /></a></div>
+                    <div className="u-flex-around"><a href="https://sportstalksocial.com/" target="_blank"><img src="/images/company3.svg" /></a></div>
                 </Zoom>
                 <Zoom>
-                    <div className="u-flex-around"><a href="https://actifit.io/@beachready" target="_blank"><img src="/assets/img/company4.svg" /></a></div>
+                    <div className="u-flex-around"><a href="https://actifit.io/@beachready" target="_blank"><img src="/images/company4.svg" /></a></div>
                 </Zoom>
                 <Zoom>
-                    <div className="u-flex-around u-company-flag"><a href="https://coinpedia.org/" target="_blank"><img src="/assets/img/company5.svg" /></a></div>
+                    <div className="u-flex-around u-company-flag"><a href="https://coinpedia.org/" target="_blank"><img src="/images/company5.svg" /></a></div>
                 </Zoom>
                 <Zoom>
-                    <div className="u-flex-around"><a href="https://marketsquare.io/" target="_blank"><img src="/assets/img/company6.svg" /></a></div>
+                    <div className="u-flex-around"><a href="https://marketsquare.io/" target="_blank"><img src="/images/company6.svg" /></a></div>
                 </Zoom>
                 <Zoom>
-                    <div className="u-flex-around"><a href="https://appics.com/" target="_blank"><img src="/assets/img/company7.svg" /></a></div>
+                    <div className="u-flex-around"><a href="https://appics.com/" target="_blank"><img src="/images/company7.svg" /></a></div>
                 </Zoom>
             </div>
         </div>

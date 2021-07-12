@@ -13,7 +13,7 @@ export default function Landing() {
                     <div className="u-graphicchart-line"></div>
                     <div className="u-graphicchart-red-line"></div>
                     <div className="u-graphicchart-coin u-flex-around">
-                        <img src="/assets/img/coin.svg" />
+                        <img src="/images/coin.svg" />
                     </div>
                     <div className="zero_line u-flex-between u-flex-column">
                         <div>Reward Amount $</div>
@@ -22,31 +22,31 @@ export default function Landing() {
                     <div className="zero_line first_line u-flex-between u-flex-column">
                         <div>$ 4,000</div>
                         <div></div>
-                        <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>
+                        <div className="u-flex-around"><img src="/images/dotes.svg" /></div>
                         <div>$ 100,000<br></br><br></br>4%</div>
                     </div>
                     <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "43%" }}>
                         <div>$ 30,000</div>
                         <div></div>
-                        <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>
+                        <div className="u-flex-around"><img src="/images/dotes.svg" /></div>
                         <div>$ 500,000<br></br><br></br>6%</div>
                     </div>
                     <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "55%" }}>
                         <div>$ 80,000</div>
                         <div></div>
-                        <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>
+                        <div className="u-flex-around"><img src="/images/dotes.svg" /></div>
                         <div>$ 1,000,000<br></br><br></br>8%</div>
                     </div>
                     <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "70%" }}>
                         <div>$ 135,000</div>
                         <div></div>
-                        <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>
+                        <div className="u-flex-around"><img src="/images/dotes.svg" /></div>
                         <div>$ 1,500,000<br></br><br></br>9%</div>
                     </div>
                     <div className="zero_line first_line u-flex-between u-flex-column" style={{ left: "85%" }}>
                         <div>$ 200,000</div>
                         <div></div>
-                        <div className="u-flex-around"><img src="/assets/img/dotes.svg" /></div>
+                        <div className="u-flex-around"><img src="/images/dotes.svg" /></div>
                         <div>$ 2,000,000<br></br><br></br>10%</div>
                     </div>
                 </div>
@@ -55,13 +55,13 @@ export default function Landing() {
                 <div className="u-graphicchart-res-line">
                     <div className="u-graphicchart-res-red-line"></div>
                     <div className="u-graphicchart-res-coin u-flex-around">
-                        <img src="/assets/img/coin.svg" />
+                        <img src="/images/coin.svg" />
                     </div>
-                    <div className="u-flex-around"><img src="/assets/img/dotes.svg" style={{ marginTop: "50px" }} /></div>
-                    <div className="u-flex-around"><img src="/assets/img/dotes.svg" style={{ marginTop: "71px" }} /></div>
-                    <div className="u-flex-around"><img src="/assets/img/dotes.svg" style={{ marginTop: "71px" }} /></div>
-                    <div className="u-flex-around"><img src="/assets/img/dotes.svg" style={{ marginTop: "71px" }} /></div>
-                    <div className="u-flex-around"><img src="/assets/img/dotes.svg" style={{ marginTop: "71px" }} /></div>
+                    <div className="u-flex-around"><img src="/images/dotes.svg" style={{ marginTop: "50px" }} /></div>
+                    <div className="u-flex-around"><img src="/images/dotes.svg" style={{ marginTop: "71px" }} /></div>
+                    <div className="u-flex-around"><img src="/images/dotes.svg" style={{ marginTop: "71px" }} /></div>
+                    <div className="u-flex-around"><img src="/images/dotes.svg" style={{ marginTop: "71px" }} /></div>
+                    <div className="u-flex-around"><img src="/images/dotes.svg" style={{ marginTop: "71px" }} /></div>
                 </div>
                 <div className="u-graphicchart-res-item u-flex-between">
                     <div>Reward&nbsp;&nbsp;&nbsp;&nbsp;<br></br>Amount $</div>

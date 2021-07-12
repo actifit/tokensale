@@ -22,7 +22,7 @@ export default function Landing() {
             </Fade>
             <Fade right>
                 <div>
-                    <img src="/assets/img/2OX.png" />
+                    <img src="/images/2OX.png" />
                 </div>
             </Fade>
         </div>

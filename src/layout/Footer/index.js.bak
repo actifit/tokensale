@@ -6,11 +6,11 @@ export default function Landing(props) {
     return (
         <div className="footer">
             <div className="footer-background u-responsive-before">
-                <img src="../../assets/img/footer_back.png" />
+                <img src="../../images/footer_back.png" />
             </div>
             <div className="footer-top u-flex-between u-responsive">
                 <a className="footer-logo-div u-flex-around u-flex-column">
-                    <img src="/assets/img/logo.svg" />
+                    <img src="/images/logo.svg" />
                 </a>
                 <div className="footer-top-items u-responsive-before">
                     <a>Company</a><br></br>
@@ -74,25 +74,25 @@ export default function Landing(props) {
                 <div><a href="https://actifit.io/privacy-policy">Privacy policy</a>|<a href="https://actifit.io/terms-conditions">Terms & Conditions</a></div>
                 <div className="social-icons u-flex-between u-responsive">
                     <div className="u-u-flex-around">
-                        <a href="https://www.facebook.com/Actifit.fitness/" target="_blank"><img src="/assets/img/facebook.svg" /></a>
-                        <a href="https://www.instagram.com/actifit.fitness/" target="_blank"><img src="/assets/img/instagram.svg" /></a>
-                        <a href="https://discord.gg/aHtcA6r" target="_blank"><img src="/assets/img/cartoon.svg" /></a>
-                        <a href="https://www.twitter.com/Actifit_fitness" target="_blank"><img src="/assets/img/twitter.svg" /></a>
-                        <a href="https://t.me/actifit" className="u-responsive-before" target="_blank"><img src="/assets/img/ariplane.svg" /></a>
-                        <a href="https://medium.com/@actifit.fitness" className="u-responsive-before" target="_blank"><img src="/assets/img/M.svg" /></a>
-                        <a href="https://www.linkedin.com/company/actifit-io" className="u-responsive-before" target="_blank"><img src="/assets/img/instgram.svg" /></a>
-                        <a href="https://www.youtube.com/channel/UCNHxAGO79rXI7Hdiikwnqtw" className="u-responsive-before" target="_blank"><img src="/assets/img/youtube.svg" /></a>
+                        <a href="https://www.facebook.com/Actifit.fitness/" target="_blank"><img src="/images/facebook.svg" /></a>
+                        <a href="https://www.instagram.com/actifit.fitness/" target="_blank"><img src="/images/instagram.svg" /></a>
+                        <a href="https://discord.gg/aHtcA6r" target="_blank"><img src="/images/cartoon.svg" /></a>
+                        <a href="https://www.twitter.com/Actifit_fitness" target="_blank"><img src="/images/twitter.svg" /></a>
+                        <a href="https://t.me/actifit" className="u-responsive-before" target="_blank"><img src="/images/ariplane.svg" /></a>
+                        <a href="https://medium.com/@actifit.fitness" className="u-responsive-before" target="_blank"><img src="/images/M.svg" /></a>
+                        <a href="https://www.linkedin.com/company/actifit-io" className="u-responsive-before" target="_blank"><img src="/images/instgram.svg" /></a>
+                        <a href="https://www.youtube.com/channel/UCNHxAGO79rXI7Hdiikwnqtw" className="u-responsive-before" target="_blank"><img src="/images/youtube.svg" /></a>
                     </div>
                     <div className="u-u-flex-around u-responsive-after">
-                        <a href="https://www.instagram.com/actifit.fitnes" target="_blank"><img src="/assets/img/ariplane.svg" /></a>
-                        <a href="https://medium.com/@actifit.fitness" target="_blank"><img src="/assets/img/M.svg" /></a>
-                        <a href="https://www.youtube.com/channel/UCNHxAGO79rXI7Hdiikwnqtw" target="_blank"><img src="/assets/img/instgram.svg" /></a>
-                        <a href="https://www.linkedin.com/company/actifit-io" target="_blank"><img src="/assets/img/youtube.svg" /></a>
+                        <a href="https://www.instagram.com/actifit.fitnes" target="_blank"><img src="/images/ariplane.svg" /></a>
+                        <a href="https://medium.com/@actifit.fitness" target="_blank"><img src="/images/M.svg" /></a>
+                        <a href="https://www.youtube.com/channel/UCNHxAGO79rXI7Hdiikwnqtw" target="_blank"><img src="/images/instgram.svg" /></a>
+                        <a href="https://www.linkedin.com/company/actifit-io" target="_blank"><img src="/images/youtube.svg" /></a>
                     </div>
                 </div>
                 <div>© 2021 actifit.io All rights reserved.</div>
             </div>
-            <img className="footer_money" src="/assets/img/money1.png" />
+            <img className="footer_money" src="/images/money1.png" />
         </div>
     );
 }

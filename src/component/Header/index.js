@@ -47,9 +47,9 @@ export default function Landing() {
                 <Fade right>
                     <div className="u-flex-end">
                         <div className="u-video u-flex-around">
-                            <img src="/assets/img/triangle.svg" />
+                            <img src="/images/triangle.svg" />
                         </div>
-                        <img className="oximg" img src="/assets/img/OX.png" />
+                        <img className="oximg" img src="/images/OX.png" />
                     </div>
                 </Fade>
             </div>
@@ -60,7 +60,7 @@ export default function Landing() {
                     </div>
                 </div>
             </Zoom>
-            <img className="money1img" img src="/assets/img/money1.png" />
+            <img className="money1img" img src="/images/money1.png" />
         </div>
     );
 }
