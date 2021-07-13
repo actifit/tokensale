@@ -56,78 +56,78 @@ export default function Landing(props) {
 	}
 	
 	
-	function buyAfitConfirm(props){
-		if (!glbprops.data.account){
-				alert('Please connect your account first');
-			return;
-		}
-		let cancelAction = false;
-		if (bnbAfit < props.data.minBnBAFIT){ bnbAfit = props.data.minBnBAFIT;cancelAction = true; 
-		}
-		if (bnbAfit > props.data.maxBnBAFIT){ bnbAfit = props.data.maxBnBAFIT;cancelAction = true;
-		}	
-		if (cancelAction){
-			return;
-		}else{
-			//console.log(window.web3.toWei(bnbAfit, "ether"));
-			if (glbprops.data.contractAFIT){
-					buyAfitProgress = true;
-					setCount(count + 1);
-			glbprops.data.contractAFIT.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfit, "ether")}).then(function(res){
-				console.log(res);
-						if (res.blockNumber && res.status){
-							console.log('success');
-							//success
-							//refresh data
-							setCount(count + 1);
-						}
-						buyAfitProgress = false;
-						setCount(count + 1);
-					}).catch(function(err){
-						buyAfitProgress = false;
-						setCount(count + 1);
-						console.log(err);
-				});
-			}
-		}
+function buyAfitConfirm(props){
+	if (!glbprops.data.account){
+			alert('Please connect your account first');
+		return;
 	}
+	let cancelAction = false;
+	if (bnbAfit < props.data.minBnBAFIT){ bnbAfit = props.data.minBnBAFIT;cancelAction = true; 
+	}
+	if (bnbAfit > props.data.maxBnBAFIT){ bnbAfit = props.data.maxBnBAFIT;cancelAction = true;
+	}	
+	if (cancelAction){
+		return;
+	}else{
+		//console.log(window.web3.toWei(bnbAfit, "ether"));
+		if (glbprops.data.contractAFIT){
+				buyAfitProgress = true;
+				setCount(count + 1);
+		glbprops.data.contractAFIT.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfit, "ether")}).then(function(res){
+			console.log(res);
+					if (res.blockNumber && res.status){
+						console.log('success');
+						//success
+						//refresh data
+						setCount(count + 1);
+					}
+					buyAfitProgress = false;
+					setCount(count + 1);
+				}).catch(function(err){
+					buyAfitProgress = false;
+					setCount(count + 1);
+					console.log(err);
+		});
+	}
+}
+}
 
-	function buyAfitxConfirm(props){
-		if (!glbprops.data.account){
-				alert('Please connect your account first');
-			return;
-		}
-		let cancelAction = false;
-		//console.log(bnbAfitx);
-		if (bnbAfitx < props.data.minBnBAFITX){ bnbAfitx = props.data.minBnBAFITX;cancelAction = true; 
-		}
-		if (bnbAfitx > props.data.maxBnBAFITX){ bnbAfitx = props.data.maxBnBAFITX;cancelAction = true;
-		}	
-		if (cancelAction){
-			return;
-		}else{
-			//console.log(bnbAfitx);
-			//console.log(window.web3.toWei(bnbAfitx, "ether"));
-			if (glbprops.data.contractAFITX){
-					buyAfitxProgress = true;
-					setCount(count + 1);
-			glbprops.data.contractAFITX.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfitx, "ether")}).then(function(res){
-				console.log(res);
-						if (res.blockNumber && res.status){
-							//success
-							//refresh data
-							setCount(count + 1);
-						}
-						buyAfitxProgress = false;
-						setCount(count + 1);
-					}).catch(function(err){
-						buyAfitxProgress = false;
-						setCount(count + 1);
-						console.log(err);
-				});
-			}
-		}
+function buyAfitxConfirm(props){
+	if (!glbprops.data.account){
+			alert('Please connect your account first');
+		return;
 	}
+	let cancelAction = false;
+	//console.log(bnbAfitx);
+	if (bnbAfitx < props.data.minBnBAFITX){ bnbAfitx = props.data.minBnBAFITX;cancelAction = true; 
+	}
+	if (bnbAfitx > props.data.maxBnBAFITX){ bnbAfitx = props.data.maxBnBAFITX;cancelAction = true;
+	}	
+	if (cancelAction){
+		return;
+	}else{
+		//console.log(bnbAfitx);
+		//console.log(window.web3.toWei(bnbAfitx, "ether"));
+		if (glbprops.data.contractAFITX){
+				buyAfitxProgress = true;
+				setCount(count + 1);
+		glbprops.data.contractAFITX.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfitx, "ether")}).then(function(res){
+			console.log(res);
+					if (res.blockNumber && res.status){
+						//success
+						//refresh data
+						setCount(count + 1);
+					}
+					buyAfitxProgress = false;
+					setCount(count + 1);
+				}).catch(function(err){
+					buyAfitxProgress = false;
+					setCount(count + 1);
+					console.log(err);
+		});
+	}
+}
+}
 	
 	glbprops = props;
 	//console.log('invest');
@@ -180,22 +180,17 @@ export default function Landing(props) {
 								<label className="u-flex-around invest-btn u-btn u-responsive-after">
 								BNB:
 								<input type="number" step="0.001" className="actifit-input" min={props.data.minBnBAFITX} max={props.data.maxBnBAFITX} onChange={(evt) => { 
-									if (props.data){
-										if (evt.target.value < 0) evt.target.value = props.data.minBnBAFITX; 
-										if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
-										bnbAfitx = evt.target.value; 
-										setCount(count + 1)
-										}
-									}
-								} 
+									if (evt.target.value < 0) evt.target.value = props.data.minBnBAFITX; 
+									if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
+									bnbAfitx = evt.target.value; 
+									setCount(count + 1)
+									}} 
 									
 								onBlur={(evt) => {
-									if (props.data){
-										if (evt.target.value < props.data.minBnBAFITX) evt.target.value = props.data.minBnBAFITX; 
-										if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
-										bnbAfitx = evt.target.value; 
-										setCount(count + 1)
-									}
+									if (evt.target.value < props.data.minBnBAFITX) evt.target.value = props.data.minBnBAFITX; 
+									if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
+									bnbAfitx = evt.target.value; 
+									setCount(count + 1)
 								}}	
 								/></label>
 								<span className="u-responsive-after">Matching AFITX: {bnbAfitx / glbprops.data.pricePerAFITX}</span>
@@ -249,22 +244,17 @@ export default function Landing(props) {
 								<label className="u-flex-around invest-btn u-btn u-responsive-after">
 								BNB:
 								<input type="number" step="0.001" className="actifit-input" min={props.data.minBnBAFIT} max={props.data.maxBnBAFIT} onChange={(evt) => { 
-									if (props.data){
-										if (evt.target.value < 0) evt.target.value = props.data.minBnBAFIT; 
-										if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
-										bnbAfit = evt.target.value; 
-										setCount(count + 1)
-										}
-									} 
-								}
+									if (evt.target.value < 0) evt.target.value = props.data.minBnBAFIT; 
+									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
+									bnbAfit = evt.target.value; 
+									setCount(count + 1)
+									}} 
 									
 								onBlur={(evt) => {
-									if (props.data){
-										if (evt.target.value < props.data.minBnBAFIT) evt.target.value = props.data.minBnBAFIT; 
-										if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
-										bnbAfit = evt.target.value; 
-										setCount(count + 1)
-									}
+									if (evt.target.value < props.data.minBnBAFIT) evt.target.value = props.data.minBnBAFIT; 
+									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
+									bnbAfit = evt.target.value; 
+									setCount(count + 1)
 								}}	
 								/></label>
 								<span className="u-responsive-after">Matching AFIT: {bnbAfit / glbprops.data.pricePerAFIT}</span>
@@ -309,20 +299,17 @@ export default function Landing(props) {
 							<label className="u-flex-around invest-btn u-btn">
 							BNB:
 							<input type="number" step="0.001" className="actifit-input" min={props.data.minBnBAFITX} max={props.data.maxBnBAFITX} onChange={(evt) => { 
-								if (props.data){
 								if (evt.target.value < 0) evt.target.value = props.data.minBnBAFITX; 
 								if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
 								bnbAfitx = evt.target.value; 
 								setCount(count + 1)
-							}} }
+								}} 
 								
 							onBlur={(evt) => {
-								if (props.data){
 								if (evt.target.value < props.data.minBnBAFITX) evt.target.value = props.data.minBnBAFITX; 
 								if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
 								bnbAfitx = evt.target.value; 
 								setCount(count + 1)
-								}
 							}}	
 							/></label>
 							<span>Matching AFITX: {bnbAfitx / glbprops.data.pricePerAFITX}</span>
@@ -363,21 +350,17 @@ export default function Landing(props) {
 								<label className="u-flex-around invest-btn u-btn">
 								BNB:
 								<input type="number" step="0.001" className="actifit-input" min={props.data.minBnBAFIT} max={props.data.maxBnBAFIT} onChange={(evt) => { 
-									if (props.data){
 									if (evt.target.value < 0) evt.target.value = props.data.minBnBAFIT; 
 									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
 									bnbAfit = evt.target.value; 
 									setCount(count + 1)
 									}} 
-								}
 									
 								onBlur={(evt) => {
-									if (props.data){
 									if (evt.target.value < props.data.minBnBAFIT) evt.target.value = props.data.minBnBAFIT; 
 									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
 									bnbAfit = evt.target.value; 
 									setCount(count + 1)
-									}
 								}}	
 								/></label>
 								<span>Matching AFIT: {(bnbAfit / glbprops.data.pricePerAFIT)}</span>
