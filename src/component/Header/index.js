@@ -14,8 +14,8 @@ import {Link} from 'react-scroll'
 // Random component
 const Completionist = () => <div className="token-div-top">Token Sale <span>CONCLUDED!</span></div>;
 
-const tsStartDate = 1631203200000;
-const tsEndDate = 1631376000000;
+const tsStartDate = 1632153600000;
+const tsEndDate = 1632412800000;
 
 // Renderer callback with condition
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
