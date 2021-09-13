@@ -9,7 +9,10 @@ import './style.css';
 import ReactDOM from 'react-dom';
 import Countdown, { zeroPad, calcTimeDelta, formatTimeDelta } from 'react-countdown';
 
-import {Link} from 'react-scroll'
+import {Link} from 'react-scroll';
+
+import YouTube from 'react-youtube';
+
 
 // Random component
 const Completionist = () => <div className="token-div-top">Token Sale <span>CONCLUDED!</span></div>;
@@ -45,12 +48,13 @@ export default function Landing() {
                     </div>
                 </Zoom>
                 <Fade right>
-                    <div className="u-flex-end">
+                    <div className="cstm-vid-cntr">
                         <div className="u-video u-flex-around">
-                            <img src="/images/triangle.svg" />
+                            <YouTube videoId="fb3Df7G5R4o" opts={{width: (window.innerWidth>1000)?'480':'320', height: (window.innerWidth>1000)?'240':'160'}}/>
                         </div>
-                        <img className="oximg" img src="/images/OX.png" />
+                        
                     </div>
+					
                 </Fade>
             </div>
             <Zoom>
