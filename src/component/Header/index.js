@@ -50,7 +50,7 @@ export default function Landing() {
                 <Fade right>
                     <div className="cstm-vid-cntr">
                         <div className="u-video u-flex-around">
-                            <YouTube videoId="fb3Df7G5R4o" opts={{width: (window.innerWidth>1000)?'480':'320', height: (window.innerWidth>1000)?'240':'160'}}/>
+                            <YouTube videoId="Vc6rpDU99nk" opts={{width: (window.innerWidth>1000)?'480':'320', height: (window.innerWidth>1000)?'240':'160'}}/>
                         </div>
                         
                     </div>
