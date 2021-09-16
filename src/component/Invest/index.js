@@ -48,7 +48,7 @@ export default function Landing(props) {
 	
 	const afitBuyHandler = () => {
 		if (Date.now() < tsStartDate){
-			alert('Token Sale has not started yet!\nYou can check for the Early Bird token sale on Actifit Twitter account.');
+			alert('Token Sale has not started yet!\nYou can check upon the Early Bird token sale via Actifit Twitter account.');
 			return;
 		}
 		/*if (Date.now() > tsEndDate){
@@ -64,7 +64,7 @@ export default function Landing(props) {
 
 	const afitxBuyHandler = () => {
 		if (Date.now() < tsStartDate){
-			alert('Token Sale has not started yet!\nYou can check for the Early Bird token sale on Actifit Twitter account.');
+			alert('Token Sale has not started yet!\nYou can check upon the Early Bird token sale via Actifit Twitter account.');
 			return;
 		}
 		/*if (Date.now() > tsEndDate){
