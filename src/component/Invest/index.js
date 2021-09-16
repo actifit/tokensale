@@ -51,6 +51,10 @@ export default function Landing(props) {
 			alert('Token Sale has not started yet!\nYou can check upon the Early Bird token sale via Actifit Twitter account.');
 			return;
 		}
+		if (!props.data){
+				alert('Please connect your account first');
+			return;
+		}
 		/*if (Date.now() > tsEndDate){
 			alert('Token Sale has concluded!');
 			return;
@@ -65,6 +69,10 @@ export default function Landing(props) {
 	const afitxBuyHandler = () => {
 		if (Date.now() < tsStartDate){
 			alert('Token Sale has not started yet!\nYou can check upon the Early Bird token sale via Actifit Twitter account.');
+			return;
+		}
+		if (!props.data){
+				alert('Please connect your account first');
 			return;
 		}
 		/*if (Date.now() > tsEndDate){
