@@ -40,7 +40,21 @@ function claimAFITXRewards(){
 
 export default function Landing(props) {
 	
+	
+	const tsStartDate = 1632153600000;
+	const tsEndDate = 1632412800000;
+
+	
+	
 	const afitBuyHandler = () => {
+		if (Date.now() < tsStartDate){
+			alert('Token Sale has not started yet!\nYou can check for the Early Bird token sale on Actifit Twitter account.');
+			return;
+		}
+		/*if (Date.now() > tsEndDate){
+			alert('Token Sale has concluded!');
+			return;
+		}*/
 		buyAfitOn = true; 
 		setCount(count + 1)
 		//setState({count: state.count + 1})
@@ -49,6 +63,14 @@ export default function Landing(props) {
 	}
 
 	const afitxBuyHandler = () => {
+		if (Date.now() < tsStartDate){
+			alert('Token Sale has not started yet!\nYou can check for the Early Bird token sale on Actifit Twitter account.');
+			return;
+		}
+		/*if (Date.now() > tsEndDate){
+			alert('Token Sale has concluded!');
+			return;
+		}*/
 		buyAfitxOn = true;
 		setCount(count + 1)
 		//setState({count: state.count + 1})
