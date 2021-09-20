@@ -5,6 +5,11 @@ import React, { useState } from 'react';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import './style.css';
+
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-D926T8XKJP');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 export default function Landing() {
 
     return (
