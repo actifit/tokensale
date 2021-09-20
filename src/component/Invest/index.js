@@ -166,25 +166,26 @@ export default function Landing(props) {
 	const [count, setCount] = useState(0);
 	
 	if (glbprops.data){
-		bnbInvestTotal = parseFloat(glbprops.data.totalDepositedBnbAFIT) + parseFloat(glbprops.data.totalDepositedBnbAFITX);
+		let early_bird_ts_bnb = 10.55 + 14.9205;//address data
+		bnbInvestTotal = parseFloat(early_bird_ts_bnb) + parseFloat(glbprops.data.totalDepositedBnbAFIT) + parseFloat(glbprops.data.totalDepositedBnbAFITX);
 	}
     return (
         <div className="u-invest u-flex-around u-flex-column">
             <Zoom>
-                <div className="u-invest-var">
+                <div className="u-invest-title">INVEST NOW TO WIN UP TO</div>
+                <div className="u-invest-2000 u-flex-around">$ 200,000</div>
+				 <div className="u-invest-var">
                     <div className="u-flex-between">
-                        <div>Total Contributed: {bnbInvestTotal} BNB</div>
-                        <div>Total Rewards: $200,000</div>
+                        <div>Total Contributed So Far: {(bnbInvestTotal>0?bnbInvestTotal.toFixed(3)+' BNB':'Loading...')} </div>
+							{ /* <!-- <div>Total Rewards: $200,000</div> --> */ }
                     </div>
-                    <div className="u-invest-var-main">
+                    { /* <!-- <div className="u-invest-var-main">
                         <div>
                             <img className="u-invest-var-main-color" src="/images/bar_back.png" style={{ width: "70%" }} />
                             <div className="u-invest-var-main-num" style={{ left: "70%" }}>70%</div>
                         </div>
-                    </div>
+                    </div>--> */ }
                 </div>
-                <div className="u-invest-title">INVEST NOW TO WIN UP TO</div>
-                <div className="u-invest-2000 u-flex-around">$ 200,000</div>
             </Zoom>
             <div className="u-invest-items u-responsive">
                 <Fade left>
