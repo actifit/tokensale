@@ -165,7 +165,7 @@ export default function Landing(props) {
 	const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;	
 	//load up account investments
 	//console.log(account);
-	
+	const [count, setCount] = useState(0);
 	
 	if (account && window.ethereum){
 		contractAFIT.methods.investments(account).call().then(function (res){
@@ -173,6 +173,8 @@ export default function Landing(props) {
 			//console.log('investments AFIT:'+investedBnBAFIT);
 			
 			if (investedBnBAFIT > 0){
+				
+				setCount(count + 1);
 			//check if funds were claimed already
 			contractAFIT.methods.claimed(account).call().then(function (res){
 				claimedAFIT = res;
@@ -194,6 +196,7 @@ export default function Landing(props) {
 			//console.log('investments AFITX:'+investedBnBAFITX);
 			
 			if (investedBnBAFITX > 0){
+				setCount(count + 1);
 			//check if funds were claimed already
 			contractAFITX.methods.claimed(account).call().then(function (res){
 				
