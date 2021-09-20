@@ -176,7 +176,7 @@ export default function Landing(props) {
                 <div className="u-invest-2000 u-flex-around">$ 200,000</div>
 				 <div className="u-invest-var">
                     <div className="u-flex-between">
-                        <div>Total Contributed So Far: {(bnbInvestTotal>0?bnbInvestTotal.toFixed(3)+' BNB':'Loading...')} </div>
+                        <div>Total Contributed So Far: {(bnbInvestTotal>0?bnbInvestTotal.toFixed(3)+' BNB':'...Connecting...')} </div>
 							{ /* <!-- <div>Total Rewards: $200,000</div> --> */ }
                     </div>
                     { /* <!-- <div className="u-invest-var-main">
