@@ -6,12 +6,14 @@ import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import './style.css';
 import Navbars from '../../layout/Navbars';
+import DOMPurify from 'dompurify'
+
 
 let glbprops;
 let bnbAfit = 0, bnbAfitx = 0;
 let buyAfitOn = false;
 let buyAfitxOn = false;
-let bnbInvestTotal = 0;
+let bnbInvestTotal;
 let buyAfitProgress = false;
 let buyAfitxProgress = false;
 
@@ -42,7 +44,7 @@ export default function Landing(props) {
 	
 	
 	const tsStartDate = 1632153600000;
-	const tsEndDate = 1632412800000;
+	const tsEndDate = 1633046400000;
 
 	
 	
@@ -167,16 +169,21 @@ export default function Landing(props) {
 	
 	if (glbprops.data){
 		let early_bird_ts_bnb = 10.55 + 14.9205;//address data
-		bnbInvestTotal = parseFloat(early_bird_ts_bnb) + parseFloat(glbprops.data.totalDepositedBnbAFIT) + parseFloat(glbprops.data.totalDepositedBnbAFITX);
+		bnbInvestTotal = '<img src="images/Binance-gold-coin.gif" style="width:40px;height:40px;" />';
+		if (parseFloat(glbprops.data.totalDepositedBnbAFIT) > 0 && parseFloat(glbprops.data.totalDepositedBnbAFITX) > 0){
+			bnbInvestTotal = parseFloat(early_bird_ts_bnb) + parseFloat(glbprops.data.totalDepositedBnbAFIT) + parseFloat(glbprops.data.totalDepositedBnbAFITX);
+			bnbInvestTotal += ' BNB';
+			bnbInvestTotal += '<img src="images/Binance-gold-coin.gif" style="width:40px;height:40px;" />';
+		}
 	}
     return (
         <div className="u-invest u-flex-around u-flex-column">
             <Zoom>
                 <div className="u-invest-title">INVEST NOW TO WIN UP TO</div>
-                <div className="u-invest-2000 u-flex-around">$ 200,000</div>
+                <div className="u-invest-2000 u-flex-around">200,000 USDT</div>
 				 <div className="u-invest-var">
                     <div className="u-flex-between">
-                        <div>Total Contributed So Far: {(bnbInvestTotal>0?bnbInvestTotal.toFixed(3)+' BNB':'...Connecting...')} </div>
+                        <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(bnbInvestTotal)}}></div>
 							{ /* <!-- <div>Total Rewards: $200,000</div> --> */ }
                     </div>
                     { /* <!-- <div className="u-invest-var-main">
