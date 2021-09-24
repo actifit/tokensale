@@ -172,7 +172,7 @@ export default function Landing(props) {
 		bnbInvestTotal = 'Total BNB Invested: <img src="images/Binance-gold-coin.gif" style="width:40px;height:40px;" />';
 		if (parseFloat(glbprops.data.totalDepositedBnbAFIT) > 0 && parseFloat(glbprops.data.totalDepositedBnbAFITX) > 0){
 			bnbInvestTotal = 'Total BNB Invested: ';
-			bnbInvestTotal += parseFloat(early_bird_ts_bnb) + parseFloat(glbprops.data.totalDepositedBnbAFIT) + parseFloat(glbprops.data.totalDepositedBnbAFITX);
+			bnbInvestTotal += (parseFloat(early_bird_ts_bnb) + parseFloat(glbprops.data.totalDepositedBnbAFIT) + parseFloat(glbprops.data.totalDepositedBnbAFITX)).toFixed(3);
 			bnbInvestTotal += ' BNB';
 			bnbInvestTotal += '<img src="images/Binance-gold-coin.gif" style="width:40px;height:40px;" />';
 		}
