@@ -94,9 +94,9 @@ export default function Landing(props) {
 			return;
 		}
 		let cancelAction = false;
-		if (bnbAfit < props.data.minBnBAFIT){ bnbAfit = props.data.minBnBAFIT;cancelAction = true; 
+		if (parseFloat(bnbAfit) < parseFloat(props.data.minBnBAFIT)){ bnbAfit = parseFloat(props.data.minBnBAFIT);cancelAction = true; 
 		}
-		if (bnbAfit > props.data.maxBnBAFIT){ bnbAfit = props.data.maxBnBAFIT;cancelAction = true;
+		if (parseFloat(bnbAfit) > parseFloat(props.data.maxBnBAFIT)){ bnbAfit = parseFloat(props.data.maxBnBAFIT);cancelAction = true;
 		}	
 		if (cancelAction){
 			return;
@@ -105,7 +105,7 @@ export default function Landing(props) {
 			if (glbprops.data.contractAFIT){
 					buyAfitProgress = true;
 					setCount(count + 1);
-			glbprops.data.contractAFIT.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfit, "ether")}).then(function(res){
+			glbprops.data.contractAFIT.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(''+bnbAfit, "ether")}).then(function(res){
 				console.log(res);
 						if (res.blockNumber && res.status){
 							console.log('success');
@@ -131,9 +131,9 @@ export default function Landing(props) {
 		}
 		let cancelAction = false;
 		//console.log(bnbAfitx);
-		if (bnbAfitx < props.data.minBnBAFITX){ bnbAfitx = props.data.minBnBAFITX;cancelAction = true; 
+		if (parseFloat(bnbAfitx) < parseFloat(props.data.minBnBAFITX)){ bnbAfitx = parseFloat(props.data.minBnBAFITX);cancelAction = true; 
 		}
-		if (bnbAfitx > props.data.maxBnBAFITX){ bnbAfitx = props.data.maxBnBAFITX;cancelAction = true;
+		if (parseFloat(bnbAfitx) > parseFloat(props.data.maxBnBAFITX)){ bnbAfitx = parseFloat(props.data.maxBnBAFITX);cancelAction = true;
 		}	
 		if (cancelAction){
 			return;
@@ -143,7 +143,7 @@ export default function Landing(props) {
 			if (glbprops.data.contractAFITX){
 					buyAfitxProgress = true;
 					setCount(count + 1);
-			glbprops.data.contractAFITX.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(bnbAfitx, "ether")}).then(function(res){
+			glbprops.data.contractAFITX.methods.deposit().send({from: glbprops.data.account, value: glbprops.data.web3.utils.toWei(''+bnbAfitx, "ether")}).then(function(res){
 				console.log(res);
 						if (res.blockNumber && res.status){
 							//success
@@ -220,9 +220,9 @@ export default function Landing(props) {
 								BNB:
 								<input type="number" step="0.001" className="actifit-input" min={props.data.minBnBAFITX} max={props.data.maxBnBAFITX} onChange={(evt) => { 
 									if (props.data){
-										if (evt.target.value < 0) evt.target.value = props.data.minBnBAFITX; 
-										if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
-										bnbAfitx = evt.target.value; 
+										if (parseFloat(evt.target.value) < 0) evt.target.value = parseFloat(props.data.minBnBAFITX); 
+										if (parseFloat(evt.target.value) > props.data.maxBnBAFITX) evt.target.value = parseFloat(props.data.maxBnBAFITX); 
+										bnbAfitx = parseFloat(evt.target.value); 
 										setCount(count + 1)
 										}
 									}
@@ -230,9 +230,9 @@ export default function Landing(props) {
 									
 								onBlur={(evt) => {
 									if (props.data){
-										if (evt.target.value < props.data.minBnBAFITX) evt.target.value = props.data.minBnBAFITX; 
-										if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
-										bnbAfitx = evt.target.value; 
+										if (parseFloat(evt.target.value) < props.data.minBnBAFITX) evt.target.value = parseFloat(props.data.minBnBAFITX); 
+										if (parseFloat(evt.target.value) > props.data.maxBnBAFITX) evt.target.value = parseFloat(props.data.maxBnBAFITX); 
+										bnbAfitx = parseFloat(evt.target.value); 
 										setCount(count + 1)
 									}
 								}}	
@@ -289,9 +289,9 @@ export default function Landing(props) {
 								BNB:
 								<input type="number" step="0.001" className="actifit-input" min={props.data.minBnBAFIT} max={props.data.maxBnBAFIT} onChange={(evt) => { 
 									if (props.data){
-										if (evt.target.value < 0) evt.target.value = props.data.minBnBAFIT; 
-										if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
-										bnbAfit = evt.target.value; 
+										if (parseFloat(evt.target.value) < 0) evt.target.value = parseFloat(props.data.minBnBAFIT); 
+										if (parseFloat(evt.target.value) > parseFloat(props.data.maxBnBAFIT)) evt.target.value = parseFloat(props.data.maxBnBAFIT); 
+										bnbAfit = parseFloat(evt.target.value); 
 										setCount(count + 1)
 										}
 									} 
@@ -299,9 +299,9 @@ export default function Landing(props) {
 									
 								onBlur={(evt) => {
 									if (props.data){
-										if (evt.target.value < props.data.minBnBAFIT) evt.target.value = props.data.minBnBAFIT; 
-										if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
-										bnbAfit = evt.target.value; 
+										if (parseFloat(evt.target.value) < parseFloat(props.data.minBnBAFIT)) evt.target.value = parseFloat(props.data.minBnBAFIT); 
+										if (parseFloat(evt.target.value) > parseFloat(props.data.maxBnBAFIT)) evt.target.value = parseFloat(props.data.maxBnBAFIT); 
+										bnbAfit = parseFloat(evt.target.value); 
 										setCount(count + 1)
 									}
 								}}	
@@ -349,17 +349,17 @@ export default function Landing(props) {
 							BNB:
 							<input type="number" step="0.001" className="actifit-input" min={props.data.minBnBAFITX} max={props.data.maxBnBAFITX} onChange={(evt) => { 
 								if (props.data){
-								if (evt.target.value < 0) evt.target.value = props.data.minBnBAFITX; 
-								if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
-								bnbAfitx = evt.target.value; 
+								if (parseFloat(evt.target.value) < 0) evt.target.value = parseFloat(props.data.minBnBAFITX); 
+								if (parseFloat(evt.target.value) > parseFloat(props.data.maxBnBAFITX)) evt.target.value = parseFloat(props.data.maxBnBAFITX); 
+								bnbAfitx = parseFloat(evt.target.value); 
 								setCount(count + 1)
 							}} }
 								
 							onBlur={(evt) => {
 								if (props.data){
-								if (evt.target.value < props.data.minBnBAFITX) evt.target.value = props.data.minBnBAFITX; 
-								if (evt.target.value > props.data.maxBnBAFITX) evt.target.value = props.data.maxBnBAFITX; 
-								bnbAfitx = evt.target.value; 
+								if (parseFloat(evt.target.value) < parseFloat(props.data.minBnBAFITX)) evt.target.value = parseFloat(props.data.minBnBAFITX); 
+								if (parseFloat(evt.target.value) > parseFloat(props.data.maxBnBAFITX)) evt.target.value = parseFloat(props.data.maxBnBAFITX); 
+								bnbAfitx = parseFloat(evt.target.value); 
 								setCount(count + 1)
 								}
 							}}	
@@ -403,18 +403,18 @@ export default function Landing(props) {
 								BNB:
 								<input type="number" step="0.001" className="actifit-input" min={props.data.minBnBAFIT} max={props.data.maxBnBAFIT} onChange={(evt) => { 
 									if (props.data){
-									if (evt.target.value < 0) evt.target.value = props.data.minBnBAFIT; 
-									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
-									bnbAfit = evt.target.value; 
+									if (parseFloat(evt.target.value) < 0) evt.target.value = parseFloat(props.data.minBnBAFIT); 
+									if (parseFloat(evt.target.value) > parseFloat(props.data.maxBnBAFIT)) evt.target.value = parseFloat(props.data.maxBnBAFIT); 
+									bnbAfit = parseFloat(evt.target.value); 
 									setCount(count + 1)
 									}} 
 								}
 									
 								onBlur={(evt) => {
 									if (props.data){
-									if (evt.target.value < props.data.minBnBAFIT) evt.target.value = props.data.minBnBAFIT; 
-									if (evt.target.value > props.data.maxBnBAFIT) evt.target.value = props.data.maxBnBAFIT; 
-									bnbAfit = evt.target.value; 
+									if (parseFloat(evt.target.value) < parseFloat(props.data.minBnBAFIT)) evt.target.value = parseFloat(props.data.minBnBAFIT); 
+									if (parseFloat(evt.target.value) > parseFloat(props.data.maxBnBAFIT)) evt.target.value = parseFloat(props.data.maxBnBAFIT); 
+									bnbAfit = parseFloat(evt.target.value); 
 									setCount(count + 1)
 									}
 								}}	
