@@ -17,7 +17,7 @@ import Web3 from 'web3';
 import { afitAbi, afitxAbi, tsAbi } from 'abi/abis';
 
 let tsStartDate = 1632153600000;
-let tsEndDate = 1633046400000;
+let tsEndDate = 1635717600000;
 let minBnBAFIT, minBnBAFITX, maxBnBAFIT, maxBnBAFITX, pricePerAFIT, pricePerAFITX, hardCapBnbAmountAFIT, hardCapBnbAmountAFITX, totalDepositedBnbAFIT = 0, totalDepositedBnbAFITX = 0, fundsClaimableAFIT, fundsClaimableAFITX, tokensLeftAFIT, tokensLeftAFITX, totalTokensAFIT, totalTokensAFITX, investedBnBAFIT, investedBnBAFITX, claimableAFIT = 0, claimableAFITX = 0, claimedAFIT, claimedAFITX;
 
 const testNet = false;

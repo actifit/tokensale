@@ -18,7 +18,7 @@ import YouTube from 'react-youtube';
 const Completionist = () => <div className="token-div-top">Token Sale <span>CONCLUDED!</span></div>;
 
 const tsStartDate = 1632153600000;
-const tsEndDate = 1633046400000;
+const tsEndDate = 1635717600000; 
 
 // Renderer callback with condition
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
